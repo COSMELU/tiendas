@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tiendas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+  <!--Data tables, for pagination-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    
+   <div class="container-tiendas">  
+    <h2>¡Busca tu tienda más cercana!</h2>
+    <p>Ingresa tu estado y da clic en la dirección para ir a Google Maps</p>  
+    
+  
+    <br>
+  
+   
+    <table class="table table-hover" id="paginated_table">
+      <thead>
+        <tr>
+          <th>Estado</th>
+          <th>Dirección</th>
+          <th>Teléfono</th>
+          <th>Horario</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td>Aguascalientes</td>
+          <td><a  draggable="false" href=" https://www.google.com.mx/maps/place/21%C2%B053'05.1%22N+102%C2%B017'46.0%22W/@21.884747,
+            -102.2982877,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.884747!4d-102.296099" rel="noopener noreferrer" target="_blank">Confeti Álvaro Obregón número 112-B, Col. Centro, Aguascalientes</a></td>
+          <td>449 994 1372 </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Aguascalientes</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/21%C2%B054'51.2%22N+102%C2%B017'33.0%22W/@21.914232,
+            -102.2946927,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.914232!4d-102.292504" rel="noopener noreferrer" target="_blank" >Luz Fashion Calle Naranjo L-24, Col. C. Comercial Agropecuario, Aguascalientes</a></td>
+          <td>449 912 9001 </td>
+          <td></td>
+        </tr>
+        <tr>
+            <td>Aguascalientes</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/21%C2%B054'51.2%22N+102%C2%B017'33.0%22W/@21.914232,
+            -102.2946927,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.914232!4d-102.292504" rel="noopener noreferrer" target="_blank">El milenio importaciones Calle Naranjo Bod. 6, Col. Comercial Agropecuario, Aguascalientes.</a></td>
+          <td>449 996 3969 </td>
+          <td></td>
+        </tr>
+       <tr>
+         <td>
+           Baja California
+         </td>
+         <td><a  draggable="false" href="https://www.google.com/maps/place/BISS%C3%9A/@32.5345998,-116.9528971,
+           975m/data=!3m2!1e3!4b1!4m5!3m4!1s0x80d947bd385c922b:0x7d5fd31e97227885!8m2!3d32.5345953!4d-116.9507084?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Tijuana–Otay Czda. 
+           Plaza Americana Otay Loc. 43, en Calzada Tecnológico No. 2100, Col. Mesa de Otay, Tijuana</a></td>
+           <td>664 623 2180 </td>
+           <td>Lunes a Domingo de 12:00 a 20:30 horas.</td>
+       </tr>
+      <tr>
+        <td>Baja California</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/BISS%C3%9A/@32.6576798,-115.4123908,18.5z/data=!4m8!1m2!2m1!1sBissu+Boutique+Mexicali!3m4!1s0x0:0x26a16486be639d65!8m2!3d32.6575415!4d-115.4126953"rel="noopener noreferrer" target="_blank">Bissú Boutique Mexicali Calzada Cetys 1801
+           y Calzada Gomez Morín, Centro Comercial Sn Pedro  </a></td>
+        <td>(686) 564 57 77</td>
+        <td>Lunes a Domingo de 9:00 a 21:00 horas. </td>     
+      </tr>
+      <tr>
+        <td>Baja California</td>
+        <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B035'33.4%22N+115%C2%B021'
+          25.1%22W/@32.5908205,-115.3583225,16z/data=!4m5!3m4!1s0x0:0x0!8m2!3d32.592619!4d-115.35696?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Mexicali Sendero Plaza Sendero Local Int. B12 en
+           Av. Antonio Valdez Herrera No. 1600. Col. Islas Agrarias A, Mexicali </a></td>
+        <td>686 516 1955 </td>   
+        <td>Lunes a Domingo de 9:00 a 21:00 horas. </td>
+      </tr>
+      <tr>
+       <td>Baja California</td>
+       <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B029'31.3%22N+116%C2%B051'04.3%22W/@32.4920315,
+        -116.8533787,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.492027!4d-116.85119?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Tijuana Paseo 2000 Plaza Paseo 2000 Local D-Pb- 02, en Blvd 2000 No. 26135, Col. Ejido Francisco Villa, Tijuana </a></td>
+        <td>664 211 7011 </td>
+        <td>Lunes a Domingo de 11:00 a 20:30 horas.</td>
+      </tr>
+      <tr>
+      <td>Baja California</td>
+      <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B030'22.2%22N+116%C2%B057'53.6%22W/@32.5061655,
+          -116.9670797,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.506161!4d-116.964891?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Tijuana  Plaza Navarrete Local 207 en Blvd. Federico Benítez No. 800, Col. El Pedregal, Tijuana</a></td>
+         <td>664 104 5535 </td>
+         <td>Lunes a Sábado de 10:00 a 19:00 horas.</td>
+      </tr>
+      <tr>
+          <td>Baja California</td>
+          <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B036'
+                 46.0%22N+115%C2%B023'04.2%22W/@32.6127735,-115.3866987,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d32.612769!4d-115.38451?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Nuevo Mexicali Plaza Nuevo Mexicali Loc. 1A en Blvd. Lázaro Cárdenas y Calle 9A. Col. Nuevo Mexicali, Mexicali</a></td>
+          <td>686 561 4499</td>
+          <td>Lunes a Domingo de 9:00 a 20:00 horas.</td>
+        </tr>
+        <tr>
+          <td>
+            Baja California
+          </td>
+          <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B031'40.9%22N+117%C2%B001'26.4%22W/@32.5280415,
+               -117.0261737,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.528037!4d-117.023985?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Bissú Boutique Tijuana Zona Río Av. Independencia No. 1511 Int: Farmacia Yza, Col. Zona Urbana Rio, Tijuana.</a></td>
+           <td>664 634 1566 </td>
+           <td>Lunes a Domingo de 10:00 a 19:00 horas</td>
+        </tr>
+        <tr>
+          <td>Baja California</td>
+          <td><a  draggable="false" href="https://www.google.com/maps/place/31%C2%B052'13.9%22N+116%C2%B037'13.0%22W/@31.8705285,
+            -116.6224697,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d31.870524!4d-116.620281?hl=es-ES" rel="noopener noreferrer" target="_blank" >Bissú Boutique Ensenada Plaza del Pueblo Int: 7-8 en Calle Nueve No. 797, Col. Centro, Ensenada. </a></td>
+          <td>646 178 8042</td>
+          <td>Lunes a Sábado de 10:00 a 19:00 horas </td>
+        </tr>
+        <tr>
+          <td>Baja California</td>
+          <td><a  draggable="false" href="https://www.google.com/maps/search/Biss%C3%BA+Boutique+Plaza+la+Pajarita+Local+C-
+                     62+Blvd.+El+Rosario+No.+7002.+Col.+Loma+del+Mar,+Tijuana/@32.4632801,-117.0316398,14z?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Bissú Boutique Tijuana Pajarita Plaza Pajarita Local C-62 en Blvd. El Rosario No. 7002, Col. del Mar, Tijuana. </a></td>
+          <td>664 687 8311</td>
+          <td>Lunes a Domingo de 11:00 a 20:30 horas. </td>
+        </tr>
+        <tr>
+          <td>Baja California</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/32%C2%B029'53.3%22N+116%C2%B058'06.0%22W/@32.4981512,-116.9705239,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.4981512!4d-116.9683352" rel="noopener noreferrer" target="_blank">Bissú Boutique Tijuana Plaza 5y10Plaza 5y10 Local E22, en Blvd. Diaz Ordaz No. 14517, Fracc. Las Fuentes, Tijuana</a></td>
+          <td>664 102 69 </td>
+          <td>Lunes a Sábado de 09:00 a 20:00 horas.</td>
+        </tr>
+        <tr>
+          <td>Baja California</td>
+            <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B038'59.6%22N+115%C2%B028'24.9%22W/@32.6498995,
+                -115.4757717,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.649895!4d-115.473583?hl=es-ES" rel="noopener noreferrer" target="_blank">Paolo’s Cosméticos Tianguis del Caballito L-k11 y k12 pasillo 
+                amarillo, col. Centro, Mexicali.</a></td>
+            <td>686 552 3956 </td>
+            <td></td>
+        </tr>
+        <tr>
+          <td>Baja California</td>
+          <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B039'30.6%22N+115%C2%B028'40.3%22W/@32.6585125,
+                -115.4800527,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.658508!4d-115.477864?hl=es-ES"rel="noopener noreferrer" target="_blank">Paolo’s Cosméticos Plaza Cachanilla, 
+                local J-13 en Adolfo López Mateos, Col. Jabonera, Mexicali. </a></td>
+                <td>686 552 3107 </td>
+                <td></td>
+        </tr>
+        <tr>
+          <td>Baja California</td>
+          <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B037'17.8%22N+115%C2%B030'30.5%22W/@32.6216065,
+              -115.5106727,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.621602!4d-115.508484?hl=es-ES" rel="noopener noreferrer" target="_blank">Paolo’s Cosméticos Plaza Galerías del Valle,
+               Local A44 en Blvd. Lázaro Cárdenas 2200. Col. El Porvenir, Mexicali.</a></td>
+               <td>686 555 9970</td>
+               <td></td>
+        </tr>
+        <tr>
+           <td>Baja California</td>
+            <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B037'16.0%22N+115%C2%B024'30.2%22W/@32.6211275,
+            -115.4105647,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.621123!4d-115.408376?hl=es-ES" rel="noopener noreferrer" target="_blank">Paolo’s Cosméticos Plaza Carranza, Local 31 en Lázaro Cárdenas No. 3000.
+             Col. Rancho La Bodega, Mexicali.</a></td>
+            <td>686 563 1639 </td>
+             <td></td>
+        </tr>
+        <tr>
+            <td>Baja California</td>
+              <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B037'16.0%22N+115%C2%B024'30.2%22W/@32.6211262,
+              -115.4099236,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.621123!4d-115.408376?hl=es-ES" rel="noopener noreferrer" target="_blank">Paolo’s Cosméticos Centro Comercial Rey Sol No. 199, entre Calles Mosaicos
+               y Cerámica. Col. Valle de Puebla, Mexicali</a></td>
+               <td>686 577 9218 </td>
+               <td></td>
+          </tr>
+          <tr>
+            <td>Baja California</td>
+            <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B030'14.9%22N+116%C2%B058'33.0%22W/@32.5041455,
+              -116.9780227,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.504141!4d-116.975834?hl=es-ES rel="noopener noreferrer" target="_blank"
+              ">Distribuidora Bellísima Blvd. Díaz Ordaz No. 1503 esq. con Ermita. Fracc. Reynoso La Mesa. Tijuana. </a></td>
+              <td>664 608 1752 </td>
+              <td></td>
+          </tr>
+          <tr>
+            <td>Baja California</td>
+            <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B030'08.9%22N+116%C2%B058'38.7%22W/@32.5024767,
+               -116.9796054,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.502461!4d-116.977406?hl=es-ES" rel="noopener noreferrer" target="_blank">Distribuidora Bellísima Ermita Sur No. 5116 Int. 1. Fracc. Cortes La Mesa. Tijuana.</a></td>
+            <td>664 681 5636 </td>
+            <td></td>
+          </tr>
+          <tr>
+           <td>Baja California</td>
+           <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B039'24.7%22N+115%C2%B027'00.8%22W/
+                @32.6568665,-115.4524047,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.656862!4d-115.450216?hl=es-ES" rel="noopener noreferrer" target="_blank">California Extensiones Centro Comercial Sol L-27 en Calz. Cuauhtémoc No. 100. Col. Cuauhtémoc Sur, Mexicali</a></td>
+           <td>686 838 3244 </td>
+           <td></td>
+          </tr>
+          <tr>
+              <td>Baja California</td>
+              <td><a  draggable="false" href="https://www.google.com/maps/place/32%C2%B036'
+                    35.7%22N+115%C2%B023'12.9%22W/@32.6099265,-115.3891007,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.609922!4d-115.386912?hl=es-ES" rel="noopener noreferrer" target="_blank">California Extensiones Sucursal Novena Plaza Rexy 
+                    Loc. 4 en Lázaro Cárdenas y Novena No. 3000. Fracc. Nuevo Mexicali, Mexicali. </a></td>
+              <td>686 561 3871</td>
+              <td></td>
+           </tr>
+<tr>
+    <td>Baja California Sur</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/search/Avenida+Leona+Vicario+No.+5135+entre%C2%A0+Isla+Cozumel+e+Isla+Caribe,++Colonia+El+caribe+Cabos/@22.9347095,-109.9311664,17z"rel="noopener noreferrer" target="_blank">
+        Joan Caribe<br> Av. Leona Vicario No. 5135 entre  Isla Cozumel e Isla Caribe, Col. El Caribe, Cabos.</a></td>
+    <td>624 123 7682</td>
+    <td>Lunes a Sábado de 11:00 a 20:00 horas. y Domingo de 11:00 a 20:00 horas.</td>     
+  </tr>
+  <tr>
+    <td>Baja California Sur</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/De+las+Brisas+2404,+Cerro+de+Los+Venados,+Cabo+San+Lucas,+B.C.S./@22.9031616,
+        -109.935671,17z/data=!3m1!4b1!4m5!3m4!1s0x86af4a644704f869:0x5c1fc080657dbdab!8m2!3d22.9031616!4d-109.9334823" rel="noopener noreferrer" target="_blank">
+        Joan Patio <br>Av. de Las Brisas No.2404, Col. Brisas Del Pacifico, Cabos.</a></td>
+    <td>624 688 8354 </td>   
+    <td>Lunes a Sábado de 9:00 a 21:00 horas. y Domingo de 9:00 a 21:00 horas. </td>
+  </tr>
+
+          <tr>
+              <td>Campeche</td>
+              <td><a  draggable="false" href="https://www.google.com/maps/place/19%C2%B050'31.9%22N+90%C2%B032'04.6%22W/@19.842195,
+                  -90.5367867,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.84219!4d-90.534598?hl=es-ES" rel="noopener noreferrer" target="_blank">Bissú Boutique Campeche Calle 
+                  18 No. 70 en esquina con Calle 55. Col. Centro, Campeche. </a></td>
+              <td>981 816 7098</td>
+              <td>Lunes a Sábado de 9:00 a 19:00 horas. <br>y Domingo de 9:00 a 14 horas.</td>
+           </tr>
+           <tr>
+             <td>Campeche</td>
+             <td><a  draggable="false" href="https://www.google.com/maps/place/19%C2%B050'42.3%22N+90%C2%B032'12.8%22W/@19.845075,
+                -90.5390817,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.84507!4d-90.536893?hl=es-ES" rel="noopener noreferrer" target="_blank">Ulises Artículos de Belleza Calle 57 no. 5,
+                 entre calle 10 y 12, col. Centro, Campeche. </a></td>
+            <td>981 816 6508</td>
+            <td></td>
+           </tr>
+           <tr>
+             <td>Campeche</td>
+             <td><a  draggable="false" href="https://www.google.com/maps/place/18%C2%B038'13.4%22N+91%C2%B050'05.0%22W/@18.6370521,
+              -91.8369057,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.637047!4d-91.834717?hl=es-ES rel="noopener noreferrer" target="_blank"
+              ">Palacio de la Fantasía Calle 24 Esq. 29-A No. 50 Local Planta Baja, Col. Centro, Cd. del Carmen.</a></td>
+              <td>938 382 4189</td>
+              <td></td>
+           </tr>
+           <tr>
+              <td>Chiapas</td>
+              <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B045'17.1%22N+93%C2%B007'22.6%22W/@16.7547631,-93.1251387,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.754758!4d-93.12295?hl=es-ES
+                rel="noopener noreferrer" target="_blank" 
+                ">Bissú Boutique Chiapas,1a Sur Poniente #356 Colonia Centro. C.P 29000 Tuxtla Gutiérrez, Chiapas/a></td>
+                <td>961 174 4325 / 96142620</td>
+                <td>Lunes a Sábado de 9:30 a 19:30 horas</td>
+            </tr>
+            <tr>
+              <td>Chiapas</td>
+              <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B045'08.3%22N+93%C2%B006'48.9%22W/@16.7523206,
+                  -93.1146643,18z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.752318!4d-93.11357?hl=es-ES rel="noopener noreferrer" target="_blank"
+                ">El Mundo de la Fantasía 1ra. Oriente Sur no. 435-A, col. Centro, Tuxtla Gutiérrez.</a></td>
+                <td>961 613 9820/961 613 6941/<br> 914 6948 </td>
+                <td></td>
+            </tr>
+            <tr>
+              <td>Chiapas</td>
+              <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B014'21.3%22N+93%C2%B054'21.6%22W/@16.2392591,
+                -93.9081747,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.239254!4d-93.905986?hl=es-ES rel="noopener noreferrer" target="_blank"
+                ">El Mundo de la Fantasía Av. Central Poniente no. 925, col. Centro, Tuxtla Gutiérrez. </a></td>
+                <td>961 600 1019 </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Chiapas</td>
+                <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B014'15.7%22N+93%C2%B053'53.3%22W/@16.2376931,
+                    -93.9003397,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d16.237688!4d-93.898151?hl=es-ES" rel="noopener noreferrer" target="_blank">El Mundo de la Fantasía
+                   Av. Central Oriente no. 321 -A, col. Centro, Tuxtla Gutiérrez.</a></td>
+                <td>961 611 2824 </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Chiapas</td>
+                <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B046'23.9%22N+93%C2%B007'41.7%22W/@16.7733211,
+                    -93.1304237,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.773316!4d-93.128235?hl=es-ES" rel="noopener noreferrer" target="_blank">El Mundo de la Fantasía Libramiento
+                     Norte Poniente no. 2851, L-15, col. Miravalle, Tuxtla Gutiérrez.</a></td>
+                     <td>961 604 7131</td>
+                     <td></td>
+              </tr>
+              <tr>
+                <td>Chiapas</td>
+                <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B045'19.9%22N+93%C2%B009'04.1%22W/@16.7555281,
+                    -93.1533157,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.755523!4d-93.151127?hl=es-ES" rel="noopener noreferrer" target="_blank">El Mundo de la Fantasía Blvd. Belisario Domínguez no. 1861,
+                     local 3, Zona I, Col. Bugambilias, Tuxtla Gutiérrez. </a></td>
+                    <td>961 671 8055 </td>
+                    <td></td>
+              </tr>
+              <tr>
+                <td>Chiapas</td>
+                <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B044
+                   '56.2%22N+93%C2%B004'56.2%22W/@16.7489531,-93.0844547,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d16.748948!4d-93.082266?hl=es-ES" rel="noopener noreferrer" target="_blank">
+                   El Mundo de la Fantasía Andrés Serra Rojas no. 250, local 29, col. El Retiro, San Cristóbal de las Casas</a></td>
+                   <td>961 604 3797</td>
+                   <td></td>
+              </tr>
+              <tr>
+                <td>Chiapas</td>
+                <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B044'09.8%22N+92%C2%B038'
+                  49.7%22W/@16.7360691,-92.6493177,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.736064!4d-92.647129?hl=es-ES" rel="noopener noreferrer" target="_blank">El Mundo de la Fantasía Diagonal Hermanos Paniagua no. 50, local 37,
+                 Barrio San Ramón, San Cristóbal de las Casas</a></td>
+                 <td>967 674 5536</td>
+                 <td></td>
+              </tr>
+              <tr>
+                  <td>Chiapas</td>
+                  <td><a  draggable="false" href="https://www.google.com/maps/place/16%C2%B045
+                    '39.2%22N+93%C2%B007'50.2%22W/@16.7608506,-93.130763,21z/data=!4m5!3m4!1s0x0:0x0!8m2!3d16.760886!4d-93.130612?hl=es-ES" rel="noopener noreferrer" target="_blank">
+                    El Mundo de la Fantasía 5a. Avenida Norte Poniente no. 2651, Int. 4, col. Centro, Tuxtla Gutiérrez</a></td>
+                    <td>961 125 1771 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                  <td>Chiapas</td>
+                  <td><a  draggable="false" href="https://www.google.com/maps/place/14%C2%B054'47.3%22N+92%C2%B015
+                      '55.6%22W/@14.9124804,-92.2662208,18.5z/data=!4m5!3m4!1s0x0:0x0!8m2!3d14.913125!4d-92.26544?hl=es-ES" rel="noopener noreferrer" target="_blank">
+                      Juguetería y Novedades Lizbeth 12a. Norte no. 55, Tapachula.</a></td>
+                  <td>962 642 8138 </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Chihuahua</td>
+                  <td><a  draggable="false" href="https://www.google.com/maps/place/28%C2%B037'
+                     52.5%22N+106%C2%B004'51.8%22W/@28.6318885,-106.0842766,15.75z/data=!4m5!3m4!1s0x0:0x0!8m2!3d28.631258!4d-106.081062?hl=es-ES" rel="noopener noreferrer" target="_blank">
+                     Bissú Boutique Chihuahua Victoria 323-B entre Calles Victoria y Libertad, Col. Centro. Chihuahua</a></td>
+                  <td>614 688 5169</td>
+                  <td>Lunes a Sábado de 10:00 a 19:00 horas. <br>
+                  Domingo de 10:00 am a 17:00 horas</td>         
+                </tr>
+                <tr>
+                 <td>Chihuahua</td>
+                 <td><a  draggable="false" href="https://www.google.com/maps/place/28%C2%B032'
+                     52.4%22N+107%C2%B029'10.0%22W/@28.5478907,-107.4883067,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d28.547886!4d-107.486118?hl=es-ES" rel="noopener noreferrer" target="_blank">
+                     Novedades Cintya Juárez no. 315-A, col. Centro, Chihuahua</a></td>
+                  <td>614 416 6748</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Chihuahua</td>
+                  <td><a  draggable="false" href="https://www.google.com/maps/place/30%C2%B024'56.1%22N+107%C2%B054'26.8%22W/@30.415419,
+                      -107.9108579,16.25z/data=!4m5!3m4!1s0x0:0x0!8m2!3d30.4155833!4d-107.9074444?hl=es-ES" rel="noopener noreferrer" target="_blank">Novedades Cintya Libertad no. 103, col. Centro, Chihuahua</a></td>
+                  <td>614 416 6748</td>
+                  <td></td>
+              </tr>
+  <tr>
+    <td>Chihuahua</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Bellarte+Beauty/@28.6175358,
+        -106.0503393,15z/data=!4m8!1m2!2m1!1sBellarte+Chihuahua+Boulevard+Jose+Fuentes+Mares+No.+300+Local+39+Colonia+Luis+Fuentes+Mares+Chihuahua.!3m4!1s0x86ea5b45aa91e7d9:0xc7121548078e4519!8m2!3d28.6212098!4d-106.049259" rel="noopener noreferrer" target="_blank">
+        Bellarte Chihuahua<br> Blvd. Jose Fuentes Mares No. 300 Loc. 39, Col. Luis Fuentes Mares, Chihuahua.</a></td>
+    <td>614 435 9992</td>   
+    <td>Lunes a Sábado de 9:00 a 20:00 horas y Domingo de 11:00 a 19:00 horas</td>
+  </tr>
+             
+            <tr>
+              <td>Coahuila</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/26%C2%B056'55.8%22N+101%C2%B024'48.9%22W/@26.9488298,-101.4157687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.948825!4d-101.41358" rel="noopener noreferrer" target="_blank">Bissú Boutique Monclova Centro Comercial Paseo Monclova Local E-06 en Blvd. Harold Pape No. 1000, Col. Estancias de San Juan Bautista, Monclova. </a></td>
+              <td>811 097 1065 </td>
+              <td>Lunes a Domingo de 11:00 a 20:30 horas</td>
+            </tr>
+            <tr>
+              <td>Coahuila</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B026'41.0%22N+100%C2%B057'39.5%22W/@25.4447218,-100.9631587,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.444717!4d-100.96097" rel="noopener noreferrer" target="_blank">Bissú Boutique Saltillo Centro Comercial Sendero Patio Saltillo Loc Int. L-11B, en Blvd. Jesús Valdez Sanchez No. 365, Col. Ex hacienda de los Cerritos. </a></td>
+              <td>811 097 1065 </td>
+              <td>Lunes a Domingo de 10:00 a 20:30 horas</td>
+            </tr>
+           <tr>
+              <td>Coahuila</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B022'40.8%22N+101%C2%B000'48.9%22W/@25.3779978,
+                -101.0157807,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.377993!4d-101.013592" rel="noopener noreferrer" target="_blank">Bissú Boutique Saltillo 
+                II Blvd. Antonio Cardenas No. 4159 Local A-10, Col. Parques de la Cañada</a></td>
+              <td>811 097 1065</td>
+              <td>Lunes a Domingo de 10:00 a 20:30 horas.</td>
+            </tr>
+            <tr>
+              <td>Coahuila</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B032'15.4%22N+103%C2%B026'20.7%22W/@25.5376058,
+                -103.4412827,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.537601!4d-103.439094" rel="noopener noreferrer" target="_blank">Gran Bazar Av. Hidalgo no. 1354 poniente, col. Centro, Torreón.</a></td>
+              <td>871 732 6959</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Coahuila</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B032'14.8%22N+103%C2%B027'38.6%22W/@25.5374468,-103.4629107,
+                17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.537442!4d-103.460722" rel="noopener noreferrer" target="_blank">Jana’s Av. Hidalgo no. 1061 poniente, col. Centro, Torreón</a></td>
+             <td>871 716 8057</td>
+             <td></td>
+           </tr>
+          <tr>
+            <td>Coahuila</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B032'31.1%22N+103%C2%B027'53.5%22W/@25.5419818,-103.4670377,
+              17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.541977!4d-103.464849" rel="noopener noreferrer" target="_blank">Almacenes El Polo Zaragoza no. 27, col. Centro, San Pedro.</a></td>
+            <td>872 772 0107</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Coahuila</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B026'20.1%22N+100%C2%B057'12.0%22W/@25.4389198,-100.9555127,
+                17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.438915!4d-100.953324" rel="noopener noreferrer" target="_blank">Tiendas Aguillón Forrajes no. 1390, col. Las Praderas, Saltillo.</a></td>
+            <td>844 431 8200</td>
+            <td></td>
+          </tr>
+      <tr>
+          <td>Coahuila</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B026'35.0%22N+100%C2%B057'39.3%22W/@25.4430658,-100.9630927,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.443061!4d-100.960904
+            " rel="noopener noreferrer" target="_blank"><a>Renatta La Baratta Comercial Plaza Sendero Loc. 20-D.
+            Blvd. Jesús Valdez Sánchez Cruz con Blvd. A los González. Frac. Ex hacienda San José de los Cerritos. Saltillo</a></td>
+          <td>811 097 1065 </td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Coahuila</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B027'23.7%22N+100%C2%B058'49.5%22W/@25.4565908,-100.9825957,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.456586!4d-100.980407
+            " rel="noopener noreferrer" target="_blank"><a>Renatta La Baratta Centro Comercial Plaza Galerías<br>
+            Loc. 412. Blvd. Nazarios S. Ortiz Garza No. 2345. Col. Tanque de Peña, Saltillo</a></td>
+          <td>811 097 1065 </td>
+          <td></td>
+      </tr>
+      <tr>
+           <td>Coahuila</td>
+           <td><a  draggable="false" href="https://www.google.com.mx/maps/place/28%C2%B025'02.8%22N+100%C2%B045'54.1%22W/@28.4174587,
+              -100.7672287,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d28.417454!4d-100.76504" rel="noopener noreferrer" target="_blank">Pink Fashion Store Calle Madero
+               No. 39 Zona Centro, Francisco I. Madero. </a></td>
+           <td>872 773 3536 </td>
+           <td></td>
+      </tr>
+      <tr>
+        <td>Coahuila</td>
+        <td><a draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B025'29.2%22N+101%C2%B000'11.6%22W/@25.4247828,-101.0054007,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.424778!4d-101.003212" rel="noopener noreferrer" target="_blank">Pink Fashion Store Aldama No. 517, Zona Centro, Saltillo. (casi esquina con Acuña) </a></td>
+        <td></td>
+        <td>Lunes a Sábado de 10:00 a 20:00 horas. y Domingo de 10:00 a 15:00 horas. </td>
+      </tr>
+      <tr>
+        <td>Coahuila</td>
+        <td><a draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B032'15.6%22N+103%C2%B027'33.9%22W/@25.5376658,-103.4615987,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.537661!4d-103.45941" rel="noopener noreferrer" target="_blank">Pink Fashion Store Hidalgo #943 Colonia Centro, Torreón. (frente al Mercado Juarez) </a></td>
+        <td>871 716 2715</td>
+        <td>Lunes a Sábado de 10:00 a 20:00 horas. y Domingo de 10:00 a 15:00 horas.</td>
+      </tr>
+
+<!--Actualización de altas-->
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Bellarte/@25.5385101,-103.4460222,3a,75y,134.59h,90.82t/data=!3m6!1e1!3m4!1sQFXJZAaC2Cm2tRNHoAlZTg!2e0!7i13312!8i6656!4m8!1m2!2m1!1sBellarte+Acu%C3%B1a.
+        +Acu%C3%B1a+No.+260+Sur,+Col.+Centro,+Torre%C3%B3n.!3m4!1s0x868fdb0634726fd3:0x2d403be89ff78666!8m2!3d25.5382606!4d-103.4458719?hl=es " rel="noopener noreferrer" target="_blank">
+        Bellarte Acuña<br> Acuña No. 260 Sur, Col. Centro, Torreón.</a></td>
+    <td>871 716 3333</td>
+    <td>Lunes a Sábado de 9:30 a 20:00 horas. y Domingo de 10:30 a 14:30 horas.</td>
+    
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Bellarte/
+        @25.5382654,-103.4480606,17z/data=!3m1!4b1!4m5!3m4!1s0x868fdb0634726fd3:0x2d403be89ff78666!8m2!3d25.5382606!4d-103.4458719" rel="noopener noreferrer" target="_blank">
+        Bellarte Alameda<br> Av. Juárez No. 258 Bis Ote,  Col. Centro, Torreón.</a></td>
+    <td>871 716 7361</td>
+    <td>Lunes a Sábado de 10:00 a 20:00 horas. y Domingo de 10:00 a 14:30 horas.</td>
+  
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Conchita/@25.5376357,-103.4615017,
+        17z/data=!4m8!1m2!2m1!1sBellarte+Conchita+Avenida+Hidalgo+casi+esq.Colonia+Centro,+Torre%C3%B3n.!3m4!1s0x0:0x8ed7f24dc5796d9!8m2!3d25.5376357!4d-103.4593128" rel="noopener noreferrer" target="_blank">
+        Bellarte Conchita<br> Av. Hidalgo casi esq. S/N,Col. Centro, Torreón.</a></td>
+    <td>871 712 2590</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 10:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Plaza+H%C3%ADpermart/@25.5479395,-103.4498161,15z/data=!4m8!1m2!2m1!1sBellarte+Hipermart.+Boulevard+Independencia+
+        No.+1100+Ote+Locales+79,+80+y+82,+Colonia+Centro+Torre%C3%B3n!3m4!1s0x0:0xbf5389499aa02866!8m2!3d25.5576192!4d-103.4362498" rel="noopener noreferrer" target="_blank">
+        Bellarte Hipermart<br> Blvd. Independencia No. 1100 Ote Locales 79, 80 y 82, Col. Centro, Torreón.</a></td>
+    <td>871 713 6528</td>
+    <td>Lunes a Sábado de 9:00 a 21:00 horas. y Domingo de 11:00 a 19:00 horas.</td>
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Plaza+H%C3%ADpermart/@25.5479395,
+        -103.4498161,15z/data=!4m8!1m2!2m1!1sBellarte+Hipermart.+Boulevard+Independencia+No.+1100+Ote+Locales+79,+80+y+82,+Colonia+Centro+Torre%C3%B3n!3m4!1s0x0:0xbf5389499aa02866!8m2!3d25.5576192!4d-103.4362498" rel="noopener noreferrer" target="_blank">
+        Bellarte Torreón<br> Av. Juárez No. 1455 Bis Pte, Col. Centro, Torreón.</a></td>
+    <td>871 741 1900</td>
+    <td>Lunes a Sábado de 9:30 a 20:00 horas. y Domingo de 10:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Bellarte+Rosita/@25.5294949,-103.4154422,19z/data=!4m8!1m2!2m1!1sBellarte+Rosita,
+        +Calle+Paseo+de+la+Rosita+No.+403+Colonia+Campestre+La+Rosita+Torre%C3%B3n!3m4!1s0x868fdb9a64519201:0xc8ad64d03bb727d!8m2!3d25.5294875!4d-103.4156134" rel="noopener noreferrer" target="_blank">
+        Bellarte Rosita<br> Calle Paseo de la Rosita No. 403 Local 2, Col. Campestre La Rosita, Torreón.</a></td>
+    <td>871 721 0885</td>
+    <td>Lunes a Sábado de 9:30 a 20:00 horas. y Domingo de 10:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Blvd.+Gral.+Pedro+Verona+Rodr%C3%ADguez+Triana+950,+Rinc%C3%B3n+de+la+Hacienda,+27294+Torre%C3%B3n,
+        +Coah./@25.5160426,-103.3934298,17z/data=!3m1!4b1!4m5!3m4!1s0x868fdc9d6533f61f:0x6a0e48d81243371f!8m2!3d25.5160378!4d-103.3912411" rel="noopener noreferrer" target="_blank">
+        Bellarte Triana<br> Blvd. Rodriguez Triana No. 950-7, Col. Carmen Romano, Torreón.</a></td>
+    <td>871 730 3382</td>
+    <td>Lunes a Sábado de 9:00 a 21:00 horas. y Domingo de 11:00 a 19:00 horas.</td>
+
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Av.+Juarez+1187,+Primero+de+Cobi%C3%A1n+
+        Centro,+27000+Torre%C3%B3n,+Coah./@25.5382816,-103.437783,17z/data=!4m13!1m7!3m6!1s0x868fdbc249528623:0x57e4a7f54df0d492!2sAv.+Juarez+1187,+Primero+de+Cobi%C3%A1n+Centro,+27000+Torre%C3%B3n,+Coah.!3b1!8m2!3d25.5382768!4d-103.4355943!3m4!1s0x868fdbc249528623:0x57e4a7f54df0d492!8m2!3d25.5382768!4d-103.4355943" rel="noopener noreferrer" target="_blank">
+        Bellarte Armas<br> Av. Juarez No. 1187, Col. Centro, Torreón.</a></td>
+    <td>871 688 4294</td>
+    <td>Lunes a Sábado de 9:30 a 20:00 horas. y Domingo de 10:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Coahuila</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Calle+C.+Transformaci%C3%B3n,+Oriente,+Parque+Industrial+Oriente,+27272+Torre%C3%B3n,
+        +Coah./@25.5280594,-103.3698814,17z/data=!3m1!4b1!4m5!3m4!1s0x868fdb5053ceaa55:0x60cbbc2f2c90920d!8m2!3d25.5280546!4d-103.3676927" rel="noopener noreferrer" target="_blank">
+        Bellarte Cedis <br> Calle Transformación No. 212, Col. Parque Industrial Oriente, Torreón.</a></td>
+    <td>871 722 5644<br>871 713 1822 </td>
+    <td>Lunes a Sábado de 9:00 a 18:00 horas. y Domingo de 9:00 a 14:30 horas.</td>
+</tr>
+<!--Fin de altas de Coahuila-->
+      <tr>
+          <td>Colima</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B014'27.7%22N+103%C2%B043'34.4%22W/@19.2410281,
+             -103.7284077,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.241023!4d-103.726219" rel="noopener noreferrer" target="_blank">Novedades Kali Calle de la Vega No. 55-A esquina con Hidalgo. Col. Centro, Colima. </a></td>
+          <td>312 312 3433</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Colima</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B014'08.6%22N+103%C2%B043'09.4%22W/@19.2357191,-103.7214767,
+            17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.235714!4d-103.719288" rel="noopener noreferrer" target="_blank">Zhola Cosméticos y Accesorios Calzada Galván 120 2a. Walmart, col. Centro, Colima. </a></td>
+          <td>312 139 4750</td>  
+          <td></td>
+       </tr>
+       <tr>
+         <td>Ciudad de México</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B015'37.9%22N+99%C2%B006'14.1%22W/@19.2605411,
+            -99.1061097,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.260536!4d-99.103921" rel="noopener noreferrer" target="_blank">Bissú y algo más 16 de septiembre no. 62, col. Belén, Xochimilco, México.</a></td>
+         <td>557 258 3640 <br>y 557 258 1208</td>
+         <td>Miércoles a Domingo de 10:00 a 19:30 horas</td>
+       </tr>
+       <tr>
+         <td>Ciudad de México</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B025'27.6%22N+99%C2%B008'04.1%22W/@19.424329,
+             -99.1366567,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.424324!4d-99.134468" rel="noopener noreferrer" target="_blank">Distribuidora Dely República de Guatemala no. 68, col. Centro, México. </a></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>Ciudad de México</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B026'04.3%22N+99%C2%B007'45.6%22W/@19.43454,
+           -99.1315197,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.434535!4d-99.129331" rel="noopener noreferrer" target="_blank">Comercializadora Marz República de Guatemala no. 69, local 2, col. Centro, México. </a></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>Ciudad de México</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B025'59.2%22N+99%C2%B007'47.6%22W/@19.433114,
+           -99.1320777,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.433109!4d-99.129889" rel="noopener noreferrer" target="_blank">Nissarana Belleza Correo Mayor no. 18, col. Centro, México. </a></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>Ciudad de México</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B025'59.2%22N+99%C2%B007'47.6%22W/@19.433114,
+           -99.1320777,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.433109!4d-99.129889" rel="noopener noreferrer" target="_blank">Corporativo Verte Bella Bolivia no. 55, local 21,
+            pasaje de Colombia, col. Centro, México. </a></td>
+          <td>555 702 7015 / 555 702 7016</td>
+          <td></td>
+      </tr>
+      <tr>
+         <td>Ciudad de México</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B026'21.4%22N+99%C2%B007'46.1%22W/@19.43928,
+            -99.1316587,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.439275!4d-99.12947" rel="noopener noreferrer" target="_blank">El Paraíso del Cosmético Calle del Carmen no. 6, local A, col. Centro, México</a></td>
+         <td>55 5491 0979</td>
+         <td></td>  
+      </tr>
+      <tr>
+        <td>Ciudad de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B026'15.3%22N+99%C2%B007'45.5%22W/@19.437581,
+           -99.1314867,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.437576!4d-99.129298" rel="noopener noreferrer" target="_blank">Alondra Importaciones Calle del Carmen no. 41, local 21, col. Centro, México. </a></td>
+        <td>555 789 7290 </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Ciudad de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B058'56.7%22N+102%C2%B017'04.2%22W/@19.982409,
+          -102.2866877,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.982404!4d-102.284499" rel="noopener noreferrer" target="_blank">Novedades Arely El Carmen No. 18, Col. Centro, México </a></td>
+        <td>555 702 7253</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Ciudad de México</td>
+        <td><a  draggable="false" href="https://goo.gl/maps/kVVEdjGdLT8Wp2dW6" rel="noopener noreferrer" target="_blank">Bissú Boutique Coapa, Av. Canal de Miramontes No. 3280 Loc. 23, Col. Villa Coapa, Tlalpan</a></td>
+        <td>558 914 4128</td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>Durango</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B033'58.5%22N+103%C2%B029'47.1%22W/@25.5662578,
+          -103.4986177,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.566253!4d-103.496429" rel="noopener noreferrer" target="_blank">La Perla Ocampo no. 357 oriente, col. Centro, Gómez Palacio. Teléfono: 871 723 1758</a></td>
+        <td>871 723 1758</td>
+        <td></td>
+      </tr>
+<!-- Altas Durango 2020-->
+
+<tr>
+    <td>Durango</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Bellarte/@24.0227453,
+        -104.6694466,19.75z/data=!4m12!1m6!3m5!1s0x869bc81814ddaaff:0x7348680bb78d1519!2sBellarte!8m2!3d24.0229557!4d-104.6692131!3m4!1s0x869bc81814ddaaff:0x7348680bb78d1519!8m2!3d24.0229557!4d-104.6692131" rel="noopener noreferrer" target="_blank">
+        Bellarte Durango<br> Victoria No. 404, Col. Centro, Durango.</a></td>
+    <td>618 825 2875</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 11:00 a 13:00 horas.</td>
+</tr>
+<tr>
+    <td>Durango</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@25.5655094,-103.4988977,
+        3a,75y,66.97h,99.81t/data=!3m6!1e1!3m4!1skr5MHGDwgdBepUPHSMiIPQ!2e0!7i16384!8i8192" rel="noopener noreferrer" target="_blank">
+        Bellarte Gomez Palacio<br> Plaza San Francisco Loc. 5-9 en Av. Hidalgo No. 113, Col. Centro, Gómez Palacio.</a></td>
+    <td>871 723 0391</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 10:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Durango</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@25.5872476,-103.4815461,3a,75y,239.6h,100.98t/
+        data=!3m7!1e1!3m5!1soRJwRXGuxAVYeJFlPPsjvA!2e0!6s%2F%2Fgeo2.ggpht.com%2Fcbk%3Fpanoid%3DoRJwRXGuxAVYeJFlPPsjvA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D62.317905%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192" rel="noopener noreferrer" target="_blank">
+        Bellarte Hamburgo<br> Blvd. Ejercito Mexicano Km. 6.7 No. 501 Int. 21, Col. Centro, Gómez Palacio.</a></td>
+    <td>871 737 1920</td>
+    <td>Lunes a Sábado de 9:00 a 21:00 horas. y Domingo de 11:00 a 19:00 horas.</td>
+</tr>
+<!-- Fin altas Durango 2020-->
+      <tr>
+        <td>Estado de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/@19.5262963,-99.2266511,3a,75y,93.93h,96.02t/data=!3m6!1e1!3m4!1sDJwMlZcMBSu-GnZdvi7Z5g!2e0!7i16384!8i8192" rel="noopener noreferrer" target="_blank">Bissú Boutique Santa Mónica <br>
+        Plaza Santa Mónica Loc. 115-116 en Camino Antiguo a Santa Mónica #8 junto a Teatro Gran Recinto, frente a Mundo E. 
+Col. Las Margaritas, Tlalnepantla.</a></td>
+        <td>556 729 4691</td>
+        <td>Lunes a Sábado de 9:00 a 18:00 horas</td>
+      </tr>
+      <tr>
+        <td>Estado de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B015'38.6%22N+99%C2%B037'45.4%22W/@19.2607361,
+           -99.6314567,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.260731!4d-99.629268" rel="noopener noreferrer" target="_blank">Bissú Boutique Metepec Plaza Pabellón Metepec Local 15,
+           en Blvd. Toluca Metepec No. 719 antes 505 Norte, Col. Las Jaras, Metepec.</a></td>
+        <td>722 918 1024</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Estado de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B015'44.1%22N+99%C2%B031'57.2%22W/@19.2622421,
+          -99.5347517,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.262237!4d-99.532563" rel="noopener noreferrer" target="_blank">Bissú Boutique San Mateo Atenco Galerías San Diego Local 7 
+          en Av. Independencia No. 432, Col. San Francisco, San Mateo Atenco.</a></td>
+        <td>728 287 0499 </td>
+        <td>Lunes a Domingo de 10:00 a 18:00 horas</td>
+      </tr>
+      <tr>
+        <td>Estado de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B016'29.6%22N+99%C2%B038'29.9%22W/@19.2748961,
+          -99.6438327,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.274891!4d-99.641644" rel="noopener noreferrer" target="_blank">La Europea Av. Isidro Fabela no. 900, col. Valle Verde y Terminal, Toluca.</a></td>
+        <td>722 270 7308 </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Estado de México</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B016'40.5%22N+99%C2%B038'39.2%22W/@19.2779141,
+          -99.6464067,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.277909!4d-99.644218" rel="noopener noreferrer" target="_blank">Cosméticos Los Ángeles Felipe Berriozabal no. 204, col. Valle Verde, Toluca.</a></td>
+        <td>722 217 9244</td>
+        <td></td>
+      </tr>
+  
+      <tr>
+        <td>Guanajuato</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'32.1%22N+101%C2%B020'37.8%22W/@20.675597,-101.3460267,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d20.675592!4d-101.343838
+  
+          " rel="noopener noreferrer" target="_blank">Bissú Boutique León Plaza Comercial Centro Max Local 12-B en Blvd. 
+            Adolfo López Mateos No. 2518 Ote. Col. Jardines de Jerez, León. </a></td>
+        <td>477 716 2261</td>
+        <td>Lunes a Domingo de 11:00 a 21:00 </td>
+      </tr>
+      <tr>
+        <td>Guanajuato</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/21%C2%B009'23.3%22N+101%C2%B041'41.1%22W/@21.156477,-101.6969467,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.156472!4d-101.694758
+  
+  
+          " rel="noopener noreferrer" target="_blank">Bissú Boutique León - Mayor Centro comercial Plaza Mayor Local 2314 en
+           Blvd. Juan Alonso de Torres Pte. 2002, Col. Valle del Campestre, León. </a></td>
+        <td>477 779 6376</td>
+        <td>Lunes a Domingo de 11:00 a 20:30 horas. </td>
+      </tr>
+   
+      <tr>
+        <td>Guanajuato</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/21%C2%B006'13.4%22N+101%C2%B041'01.7%22W/@21.103724,-101.6859907,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.103719!4d-101.683802
+   
+          " rel="noopener noreferrer" target="_blank">La Misión Independencia no. 548-A, col. San Miguel, León. </a></td>
+        <td>477 715 5594 </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guanajuato</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'32.1%22N+101%C2%B020'37.8%22W/@20.675597,-101.3460267,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.675592!4d-101.343838
+          " rel="noopener noreferrer" target="_blank">Novedades Alma’s Leandro Valle no. 471, local 10, col. Centro, Irapuato</a></td>
+        <td>462 627 2022 </td>
+        <td></td>
+      </tr>
+<!-- altas Guanajuato 2020-->
+  <tr>
+    <td>Guanajuato</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@21.12465,-101.6844167,3a,75y,359.37h,103.96t/data=!3m6!1e1!3m4!1slJzlS-FbhZU-PcoaEHm2kg!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Las Chulas<br> Aquiles Serdán No. 205, Col. Centro, León </a></td>
+    <td>447 636 3740 </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Guanajuato</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@21.1208534,-101.6859413,3a,75y,256.94h,78.93t/data=!3m7!1e1!3m5!1srn504BphAutqdmGfjNPRVg!2e0!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3Drn504BphAutqdmGfjNPRVg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D202.01585%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Chulas Comonfort<br> Ignacio Comonfort No. 364, Col. Centro, León</a></td>
+    <td>447 713 0080</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Guanajuato</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@21.124112,-101.6834532,3a,75y,298.56h,73.71t/data=!3m6!1e1!3m4!1snJh8mbHH1NCiOi7Olk26jA!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Chulas Nails <br>Calle 20 de Enero No. 151B Loc-1, Col. Centro, León</a></td>
+    <td>447 716 0870</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Guanajuato</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Plazarella/@21.0227967,
+        -101.8523339,17z/data=!4m8!1m2!2m1!1sPlazarella,+Boulevard+Aquiles+Serd%C3%A1n+Centro,+San+Francisco+del+Rinc%C3%B3n,+Guanajuato!3m4!1s0x842be851df348b5b:0x17ff2d7626886f52!8m2!3d21.0227793!4d-101.8504" rel="noopener noreferrer" target="_blank">
+        Chulas San Pancho<br> Centro Comercial Plazarella Local 13, Col. Centro, San Fco. del Rincón.</a></td>
+    <td>476 744 5046</td>
+    <td></td>
+  </tr>
+      <tr>
+        <td>Guerrero</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/16%C2%B051'32.1%22N+99%C2%B054'02.1%22W/@16.8589111,
+          -99.9027617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.858906!4d-99.900573
+          " rel="noopener noreferrer" target="_blank">La Perla Ignacio Vallarta Vallarta no. 25, col. Progreso, Acapulco. </a></td>
+        <td>744 485 1499</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guerrero</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/16%C2%B051'32.1%22N+99%C2%B054'02.1%22W/@16.8589111,-99.9027617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.858906!4d-99.900573
+          " rel="noopener noreferrer" target="_blank">Novedades y Bazar Gutnav Ignacio Vallarta no. 3, col. Progreso, Acapulco. </a></td>
+        <td>744 486 0898</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guerrero</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/16%C2%B051'05.7%22N+99%C2%B054'22.3%22W/@16.8515801,-99.9083837,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.851575!4d-99.906195
+          " rel="noopener noreferrer" target="_blank">El Diez Mina no. 7, col. Centro, Acapulco.  </a></td>
+        <td>744 485 1499</td>
+        <td></td>
+      </tr>
+      <tr>
+         <td>Guerrero</td>
+         <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B019'01.1%22N+100%C2%B016'56.5%22W/@18.3169711,-100.2845367,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.316966!4d-100.282348
+          " rel="noopener noreferrer" target="_blank">Bibi Chacharitas Berriozabal no. 9, col. Centro, Arcelia. </a></td>
+         <td>732 364 3202</td>
+         <td></td>
+      </tr>
+      <tr>
+        <td>Hidalgo</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B006'52.0%22N+98%C2%B044'41.4%22W/@20.114452,
+          -98.7470127,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.114447!4d-98.744824" rel="noopener noreferrer" target="_blank">Bissú Boutique Pachuca Plaza Bella Local 3 Zona G en Av. Revolución No. 1307, Col. Periodistas, Pachuca.</a></td>
+        <td>771 407 5232 / 771 103 1273</td>
+        <td>Lunes a Domingo de 10:00 a 21:00 horas</td>
+      </tr>
+      <tr>
+        <td>Hidalgo</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B005'02.6%22N+98%C2%B022'01.3%22W/@20.084052,-98.3692247,
+          17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.084047!4d-98.367036
+          " rel="noopener noreferrer" target="_blank">Distribuidora Lucky’s House Manuel Fernando Soto No. 301, local 2, col. Centro, Tulancingo. </a></td>
+        <td>775 755 6408</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guadalara, Jalisco</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'31.2%22N+103%C2%B020'14.4%22W/@20.675336,-103.3395297,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.675331!4d-103.337341
+          " rel="noopener noreferrer" target="_blank">Novedades Santi I Vicente Guerrero no. 137, col. San Juan de Dios, Guadalajara</a></td>
+        <td>333 586 8606</td>
+        <td></td>
+      </tr> 
+      <tr>
+        <td>Guadalara, Jalisco</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'27.1%22N+103%C2%B019
+          '58.8%22W/@20.674194,-103.3351737,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.674189!4d-103.332985
+          " rel="noopener noreferrer" target="_blank">Novedades Santi II Av. Javier Mina no. 489, col. San Juan de Dios, Guadalajara.</a></td>
+        <td>333 654 5187 </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guadalara, Jalisco</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'22.4%22N+103%C2%B019'55.2%22W/@20.672906,
+          -103.3341867,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.672901!4d-103.331998
+          " rel="noopener noreferrer" target="_blank">Novedades Santi III Av. Javier Mina no. 566, col. San Juan de Dios, Guadalajara. </a></td>
+        <td>333 944 8701</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guadalara, Jalisco</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'30.1%22N+103%C2%B020'07.8%22W/@20.675041,-103.3376857,
+          17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.675036!4d-103.335497
+          " rel="noopener noreferrer" target="_blank">Novedades Santi IV Mariano Jiménez No. 182, Col. San Juan de Dios, Guadalajara.</a></td>
+        <td>333 617 1569</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Guadalara, Jalisco</td>
+        <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'27.1%22N+103%C2%B020'12.1%22W/@20.674194,
+          -103.3388757,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.674189!4d-103.336687
+          " rel="noopener noreferrer" target="_blank">Daniela Proveedores de Belleza I Av. Javier Mina no. 318, col. San Juan de Dios, Guadalajara.</a></td>
+        <td>333 618 4432 / 333 617 8956 </td>
+        <td></td>
+      </tr>
+      <tr>
+          <td>Guadalara, Jalisco</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'22.9%22N+103%C2%B020'09.2%22W/@20.673037,
+            -103.3380847,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.673032!4d-103.335896
+            " rel="noopener noreferrer" target="_blank">Daniela Proveedores de Belleza III Av. Javier Mina No. 363, Col. San Juan de Dios, Guadalajara.</a></td>
+          <td>333 617 9907</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Guadalara, Jalisco</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'22.9%22N+103%C2%B020'09.2%22W/@20.673037,
+            -103.3380847,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.673032!4d-103.335896
+            " rel="noopener noreferrer" target="_blank">Comercializadora Acimura Kilimanjaro No. 1616, Col. Independencia, Guadalajara.</a></td>
+          <td>333 699 3984</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Guadalara, Jalisco</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'26.3%22N+103%C2%B020'52.8%22W/@20.673981,
+            -103.3501927,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.673976!4d-103.348004
+            " rel="noopener noreferrer" target="_blank">Vaig Cosmetics Colón no. 177, col. Centro, Guadalajara.</a></td>
+          <td>333 658 2163</td>
+          <td></td>
+        </tr> 
+        <tr>
+          <td>Guadalajara, Jalisco</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B040'30.1%22N+103%C2%B020'32.4%22W/@20.675045,
+            -103.3445177,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.67504!4d-103.342329
+            " rel="noopener noreferrer" target="_blank">Maldonado Hermanos Grecia no. 107, local 40, col. Centro, Guadalajara.</a></td>
+          <td>333 618 9939 </td>
+          <td></td>
+        </tr>
+
+<!-- Altas Jalisco 2020-->
+
+<tr>
+    <td>Guadalara, Jalisco</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@20.6772496,-103.3529772,3a,
+        75y,162.05h,90t/data=!3m6!1e1!3m4!1saL8DClV3ehkMP0aaHYnHmw!2e0!7i16384!8i8192" rel="noopener noreferrer" target="_blank">
+        Joan Guadalajara<br> Av. Hidalgo No. 675, Col. Centro, Guadalajara.</a></td>
+    <td>333 613 6826</td>
+    <td>Lunes a Sábado de 9:30 a 19:30 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Guadalajara, Jalisco</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@20.6132572,-105.231969,
+        3a,75y,126.8h,98.56t/data=!3m6!1e1!3m4!1ss2kEaORvw4-pToFQxjK4Ig!2e0!7i16384!8i8192" rel="noopener noreferrer" target="_blank">
+        Joan Vallarta<br> Benito Juárez No. 862, Col. Centro, Puerto Vallarta.</a></td>
+    <td>322 222 2967</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas.</td>
+</tr>
+
+<!-- Fin altas Jalisco 2020-->
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B058'56.7%22N+102%C2%B017'04.2%22W/@19.982409,-102.2866877,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.982404!4d-102.284499
+            " rel="noopener noreferrer" target="_blank">Novedades y Regalos Claudia Corregidora no. 162 oriente, col. Centro, Zamora. </a></td>
+          <td>351 512 2291</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B004'26.5%22N+102%C2%B021'36.3%22W/@19.0740271,-102.3622617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.074022!4d-102.360073
+            " rel="noopener noreferrer" target="_blank">Fantasía 2000 José María Coss no. 72, col. Centro, Apatzingán.</a></td>
+          <td>453 572 7528</td>  
+          <td></td>
+        </tr>
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B041'43.1%22N+101%C2%B011'15.6%22W/@19.695309,-101.1898577,
+            17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.695304!4d-101.187669" rel="noopener noreferrer" target="_blank">Fantasía 2000 Vicente Santa María no. 734-A, col. Ventura Puente, Morelia.</a></td>
+          <td>55 3186 1593</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B041'51.8%22N+101%C2%B011'21.7%22W/@19.697713,
+            -101.1915527,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.697708!4d-101.189364
+            " rel="noopener noreferrer" target="_blank">Novedades Monserrat Andrés del Río No. 182-A, col. Centro, Morelia</a></td>
+          <td>443 165 1123</td>  
+          <td></td>
+        </tr>     <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B042'13.6%22N+101%C2%B011'22.7%22W/@19.703794,
+            -101.1918197,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.703789!4d-101.189631
+            " rel="noopener noreferrer" target="_blank">Shop Fantasy Álvaro Obregón no. 68, col. Centro, Uruapan</a></td>
+          <td>452 523 1039 </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B025'29.3%22N+102%C2%B003'37.1%22W/@19.424815,
+            -102.0624977,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.42481!4d-102.060309
+            " rel="noopener noreferrer" target="_blank">Fantasía 2000 Constitución no. 35-B, col. Centro, Uruapan.</a></td>
+          <td>452 523 1039 </td>  
+          <td></td>
+        </tr>
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B058'56.4%22N+102%C2%B017'01.6%22W/@19.982326,-102.2859627,
+            17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.982321!4d-102.283774
+            " rel="noopener noreferrer" target="_blank">Accesorios y Cosméticos Ángel Corregidora Oriente No. 213, Col. Centro, Zamora.</a></td>
+          <td>351 512 0347 </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Michoacán</td>
+          <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B041'42.3%22N+101%C2%B011'15.6%22W/@19.69508,
+            -101.1898597,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.695075!4d-101.187671
+            " rel="noopener noreferrer" target="_blank">Novedades Marianne Vicente Santa Maria No. 739-5, Col. Ventura Puente, Morelia</a></td>
+          <td>443 343 0594</td>  
+          <td></td>
+        </tr>        
+        <tr>
+            <td>Michoacán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B041'43.1%22N+101%C2%B011'15.6%22W/@19.6953056,-101.1898554,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.695304!4d-101.187669
+              " rel="noopener noreferrer" target="_blank">Cosméticos Y Novedades Lulú Vicente Sta. Maria 734, Col. Ventura Puente, Morelia. </a></td>
+            <td>443 343 0616 </td>
+            <td></td>
+          </tr>
+ <tr>
+            <td>Michoacán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Rousse+Cosmeticos/@19.6958181,-101.1908621,21z/data=!4m12!1m6!3m5!1s0x842d0f730f47a53f:
+             0xe32e723c46cbab53!2sRousse+Cosmeticos!8m2!3d19.6957682!4d-101.1907387!3m4!1s0x842d0f730f47a53f:0xe32e723c46cbab53!8m2!3d19.6957682!4d-101.1907387
+              " rel="noopener noreferrer" target="_blank">Rousse Cosméticos <br> Lazaro Cardenas 368-B, Col. Ventura Puente. Morelia.</a></td>
+            <td>443 688 4229</td>
+            <td></td>
+          </tr>
+
+           <tr>
+            <td>Michoacán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/@19.702252,-101.2074045,3a,75y,358.67h,91.3t/data=!3m7!1e1!3m5!1si_P4WyZlMVdLrs7Xm8aXLQ!2e0!6s%2F%2Fgeo2.ggpht.com%2Fcbk%3Fpanoid%3Di_P4WyZlMVdLrs7Xm8aXLQ%
+            26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D31.006937%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656
+              " rel="noopener noreferrer" target="_blank">Cosméticos Lulú <br> Calle Av. Madero Poniente 1465-A, Col. Bocanegra, Morelia.</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Morelos</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B048'56.3%22N+98%C2%B057'13.5%22W/@18.8156481,-98.9559427,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.815643!4d-98.953754
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Cuautla Aguayo No. 2 esq. con Galeana Col. Centro Histórico, Cuautla</a></td>
+            <td>735 352 6298 </td>  
+            <td>Lunes a Domingo de 9:30 a 20:30 horas. </td>
+          </tr>
+          <tr>
+            <td>Morelos</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B055'27.9%22N+99%C2%B014'02.5%22W/@18.9244081,
+              -99.2362187,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.924403!4d-99.23403
+              " rel="noopener noreferrer" target="_blank">Fantasías Silvia Clavijero no. 27, col. Centro, Cuernavaca. </a></td>
+            <td>777 314 1016 </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Morelos</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B051'59.4%22N+98%C2%B057'01.8%22W/@18.8664991,
+              -98.9526987,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d18.866494!4d-98.95051
+              " rel="noopener noreferrer" target="_blank">Perfumería Alin Carretera Federal México - 
+              Cuautla no. 151, Zona Comercial local 14, col. Central de Abastos, Cuautla. </a></td>
+            <td>735 353 0233</td>  
+            <td></td>
+          </tr>
+<!-- Altas NAYARIT 2020-->
+
+<tr>
+    <td>Nayarit</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Distribuidora+Joan/@21.5107994,
+        -104.892674,20z/data=!4m5!3m4!1s0x842736fe287086d7:0x8d9de60038b6ac1a!8m2!3d21.510863!4d-104.892302" rel="noopener noreferrer" target="_blank">
+        Joan Tepic<br> Hidalgo Local No.15-A Pte., Col. Centro, Tepic.</a></td>
+    <td>322 223 4227</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas..</td>
+</tr>
+<tr>
+    <td>Nayarit</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Plaza+%C3%81lica/
+        @21.492937,-104.8823941,17z/data=!4m14!1m8!3m7!1s0x84273718658b3a4b:0xa24b4c98909db02f!2sPlaza+%C3%81lica!8m2!3d21.492937!4d-104.8823941!14m1!1BCgIYEg!3m4!1s0x84273718658b3a4b:0xa24b4c98909db02f!8m2!3d21.492937!4d-104.8823941" rel="noopener noreferrer" target="_blank">
+        Joan Alica<br> Plaza Alica Local 18-B en Av. Universidad S/N, Col. Ciudad del Valle, Tepic.</a></td>
+    <td>311 133 0263</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Nayarit</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Plaza+Cigarrera/@21.4972639,-104.8842229,19z/
+        data=!3m1!4b1!4m12!1m6!3m5!1s0x8427371980270883:0x52d8fc9d7fc8446a!2sSoriana+H%C3%ADper+-+Cigarrera!8m2!3d21.4974466!4d-104.8842618!3m4!1s0x842737197f7c6477:0x240accf09df00d74!8m2!3d21.4972639!4d-104.8836757" rel="noopener noreferrer" target="_blank">
+        Joan Cigarrera<br>Av. Insurgentes No. 368 Int. 24, entre Av. Gaviota y 12 de Octubre, Col. Los Llanitos, Tepic.</a></td>
+    <td>311 133 1583</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Nayarit</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@21.5126069,-104.8939314,3a,90y,96.24h,
+        100.87t/data=!3m7!1e1!3m5!1slu55cnA-zTf2ZZEKS5USxQ!2e0!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3Dlu55cnA-zTf2ZZEKS5USxQ%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D46.937435%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192" rel="noopener noreferrer" target="_blank">
+        Joan Tepic Centro<br> Calle Durango Nte. No. 210, Col. Centro, Tepic.</a></td>
+    <td>311 212 0880</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Nayarit</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@21.5120998,-104.8930083,3a,90y,
+        334.95h,94.95t/data=!3m6!1e1!3m4!1sQCvdGcyoe23Ybm1cagGbQw!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Joan Lerdo<br> Sebastián Lerdo No. 80, Col. Centro, Tepic.</a></td>
+    <td>311 212 0298</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+
+<!-- Fin altas NAYARIT 2020-->
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B046'05.8%22N+100%C2%B018'07.5%22W/@25.7682938,
+              -100.3042797,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.768289!4d-100.302091
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Monterrey Av. Sendero No. 130 Pte. Loc. I-4. En Centro 
+              Comercial Sendero Col. Centro, General Escobedo, Nuevo León.</a></td>
+            <td>811 097 1065 </td>  
+            <td>Lunes a Domingo de 10:00 a 20:30 horas.</td>
+          </tr>
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B034'32.0%22N+100%C2%B014'37.2%22W/@25.5755628,
+              -100.2458507,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.575558!4d-100.243662
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Monterrey Esfera City Center Loc. B-255, Carr.
+               Nac. Km. 268, Col. La Rioja Priv. Resid. 2a etapa, Monterrey.</a></td>
+            <td>811 097 1065 </td>  
+            <td>Lunes a Domingo de 11:00 a 20:30 horas.</td>
+          </tr>   
+          <tr>
+              <td>Nuevo León</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B045'59.1%22N+100%C2%B011'27.7%22W/@25.7664148,-100.1932047,
+                17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.76641!4d-100.191016
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Apodaca CC. Sendero La Fe Loc. Int.F-06,
+                 Av. Miguel Alemán Esq. Av. Teléfono S/N. Col. Centro, Apodaca.</a></td>
+              <td>811 097 1065 </td>  
+              <td>Lunes a Domingo de 10:00 a 20:30 horas. </td>
+            </tr>     
+            <tr>
+              <td>Nuevo León</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B042'05.9%22N+100%C2%B018'31.5%22W/@25.7016378,
+                -100.3109257,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.701633!4d-100.308737
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Monterrey Centrika Av. 
+                Vicente Guerrero No. 2500. Col. Centrika 2 Sector, Monterrey Teléfono: </a></td>
+              <td>811 097 1065</td>  
+              <td>Lunes a Domingo de 10:00 a 20:30 horas</td>
+            </tr>     
+            <tr>
+              <td>Nuevo León</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B043'56.5%22N+100%C2%B023'46.2%22W/@25.7323778,-100.3983497,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.732373!4d-100.396161
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Monterrey Cumbres Plaza Cumbres Loc. Int-1128, 
+                en Av. Hacienda Peñuelas No. 6771, Col. Residencial Cumbres Las Palmas.</a></td>
+              <td>811 097 1065 </td>  
+              <td>Lunes a Domingo de 10:00 a 20:30 horas. </td>
+            </tr>    
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B038'21.2%22N+100%C2%B018'51.0%22W/@25.6392158,-100.3163507,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.639211!4d-100.314162" rel="noopener noreferrer" target="_blank">Bissú Boutique Monterrey Valle Oriente Centro Comercial Galerías Valle Oriente
+               Local L-2159, en Av. Lazaro Cardenas No. 1000, Col. Valle del Mirador. </a></td>
+            <td>811 097 1065 </td>
+            <td>Lunes a Domingo de 11:00 a 20:30 horas</td>
+          </tr>   
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B047'01.7%22N+100%C2%B014'15.2%22W/@25.7838218,-100.2397547,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d25.783817!4d-100.237566
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Sendero Apodaca Loc. 16-C. Av. La Concordia esq. 
+              Antiguo camino a Santa Rosa No. 800. Al Norte de la Colonia Ébanos. Apodaca</a></td>
+            <td>811 097 1065</td>  
+            <td></td>
+          </tr>     
+          
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B040'31.3%22N+100%C2%B018'54.1%22W/@25.6753698,-100.3172247,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.675365!4d-100.315036" rel="noopener noreferrer" target="_blank">Novedades el Cisne Modesto Arreola 119 poniente, 
+              entre Colegio Civil y Juárez, col. Centro, Monterrey. </a></td>
+            <td>818 343 5213 </td>  
+            <td></td>
+          </tr>             
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B040'29.7%22N+100%C2%B018'55.8%22W/@25.6749248,-100.3176757,17z/data=
+              !3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.67492!4d-100.315487" rel="noopener noreferrer" target="_blank">Novedades el Cisne Colegio Civil no. 246-L-F, 
+              entre Washington y Modesto Arreola, col. Centro, Monterrey.</a></td>
+            <td>818 343 5213 </td>  
+            <td></td>
+          </tr>    
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B047'45.6%22N+100%C2%B035'14.2%22W/@25.7960128,-100.5894717,
+              17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.796008!4d-100.587283" rel="noopener noreferrer" target="_blank">Novedades el Cisne II Av. Sor Juana Inés de la Cruz
+               no. 201 L-5, col. Villa de los Nogales, García. </a></td>
+            <td>818 283 4872 </td>  
+            <td></td>
+          </tr>     
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B045'46.2%22N+100%C2%B024'36.3%22W/@25.7628268,
+              -100.4122727,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.762822!4d-100.410084" rel="noopener noreferrer" target="_blank">Renata La Baratta Centro Comercial Sendero Lincoln Loc. 7-C. Av. Abraham Lincoln No. 4001
+               cruce con Av. Puerta de Hierro. Col. Residencial Puerto de Hierro, Monterrey. </a></td>
+            <td>811 097 1065 </td>  
+            <td></td>
+          </tr>     
+          <tr>
+            <td>Nuevo León</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B046'02.4%22N+100%C2%B018'08.0%22W/@25.7673398,-100.3044067,
+              17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.767335!4d-100.302218" rel="noopener noreferrer" target="_blank">Renatta La Baratta Plaza Sendero. Sendero Norte 
+              Poniente No. 130 Col. Centro, General Escobedo. </a></td>
+            <td>811 097 1065 </td>  
+            <td></td>
+          </tr>
+<!-- Alta Nuevo León 2020-->
+<tr>
+    <td>Nuevo León</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Av.+Benito+Ju%C3%A1rez+440,
+        +Centro,+64000+Monterrey,+N.L./@25.6726113,-100.3155157,19z/data=!4m5!3m4!1s0x8662be286f30578f:0x1a66b3b741abca5b!8m2!3d25.6729159!4d-100.3150959" rel="noopener noreferrer" target="_blank">
+        Bellarte Monterrey<br> Av. Juárez No. 440 Sur, Col.  Centro, Monterrey.</a></td>
+    <td>818 340 6732</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 10:00 a 18:00 horas.</td>
+</tr>
+
+          <tr>
+              <td>Oaxaca</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B002'54.7%22N+96%C2%B043'00.6%22W/@17.0485341,-96.7190237,
+                17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.048529!4d-96.716835
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Oaxaca Soriana Av. Ing. Jorge I. Tamayo No. 500 local 59, entre Vicente Guerrero y Av. Universidad, Oaxaca</a></td>
+              <td>951 207 7456 y 951 207 8795 </td>  
+              <td> Lunes a Domingo de 10:00 a 21:00 horas.</td>
+            </tr>
+            <tr>
+              <td>Oaxaca</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B004'05.3%22N+96%C2%B041'39.4%22W/@17.0681511,
+                -96.6964757,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.068146!4d-96.694287
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Oaxaca Centro Comercial Regional Macro Plaza Oaxaca Loc. 
+                4 en Av. Internacional 2002. Col. Nueva Santa Lucia, Oaxaca. </a></td>
+              <td>951 503 4122 </td>  
+              <td>Lunes a Domingo de 10:00 a 21:00 horas. </td>
+            </tr>
+            <tr>
+              <td>Oaxaca</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B003'27.5%22N+96%C2%B043'32.3%22W/@17.0576411,
+                -96.7278367,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.057636!4d-96.725648
+                " rel="noopener noreferrer" target="_blank">Plaza de Importaciones SOS Bonita Bustamante No. 319, Col. Centro, Oaxaca. </a></td>
+              <td>951 514 5074 </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B000'20.1%22N+98%C2%B016'02.5%22W/@19.0055741,
+                -98.2695547,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.005569!4d-98.267366
+                " rel="noopener noreferrer" target="_blank">Plaza Arcángeles Plaza Arcángeles Local 37 en Vía Atlixcayotl No. 6510,
+                 San Bernardino Tlaxcalancingo, San Andrés Cholula, Puebla.</a></td>
+              <td>222 295 4327 </td>
+              <td>Lunes a Sábado de 10:00 a 20:00 horas.</td>
+            </tr>
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B004'25.2%22N+98%C2%B015'26.1%22W/@19.0736791,
+                -98.2594247,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.073674!4d-98.257236
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Puebla Cruz del Sur Centro Comercial Cruz del Sur Loc. F-4 en Av. Forjadores de Puebla No. 1009. Col. Los Arcos, Puebla.</a></td>
+              <td>222 285 3309 </td>
+              <td>Lunes a Jueves de 11:00 a 20:30 horas.<br>Viernes a Domingo de 11:00 a 21:00 horas</td>
+            </tr>  
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B001'41.2%22N+98%C2%B012'09.3%22W/@19.0281151,
+                -98.2047687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.02811!4d-98.20258
+          " rel="noopener noreferrer" target="_blank">Bissú Boutique Puebla Plaza 1313 local 3 11 Sur, entre 13 y 15 poniente, Puebla</a></td>
+              <td>222 243 51 06</td>
+              <td>Lunes a viernes de 10:30 a 19:30 horas.
+                 Sábados de 9:00 a 18:00 horas. </td>
+            </tr>  
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B002'36.8%22N+98%C2%B012'34.6%22W/@19.0435501,
+                -98.2117867,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.043545!4d-98.209598
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Puebla Mayoreo Plaza 1313 local 3 11 Sur, entre 13 y 15 poniente, Puebla. </a></td>
+              <td>222 243 51 06</td>
+              <td>Lunes a viernes de 9:00 a 19:30 horas. Sábado de 9:00 a 18:00 horas. </td>
+            </tr>  
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B059'15.0%22N+98%C2%B014'49.0%22W/@18.9874951,
+                -98.2491237,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.98749!4d-98.246935
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Puebla Centro Sur Av. 11 Sur No. 11904 Local B-9, Col. Agua Santa, Puebla </a></td>
+              <td>222 271 6124 </td>
+              <td>Lunes a Domingo de 11:00 a 20:00 horas.</td>
+            </tr>  
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://goo.gl/maps/MW1c4z4XhFXP269j7"
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Plaza Pradea Sur, Plaza Pradea Sur, local 16 Blvd. Valsequillo No. 7736,  72583
+                ,San José Xilotzingo.
+               </a></td>
+              <td>222 271 6124 </td>
+              <td>Lunes a Sábado de 11:00 a 19:00 horas.</td>
+            </tr>
+
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B003'08.8%22N+98%C2%B012'16.1%22W/@19.0524491,
+                -98.2066617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.052444!4d-98.204473
+                " rel="noopener noreferrer" target="_blank">Novedades Carmelita 10 Poniente no. 316, col. Centro., Puebla.</a></td>
+              <td>222 246 0784 </td>
+              <td></td>
+            </tr>
+    
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B027'42.3%22N+97%C2%B023'26.6%22W/@18.4617651,
+                -97.3929227,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.46176!4d-97.390734
+                " rel="noopener noreferrer" target="_blank">Cosmetidiez Cosméticos y NVS 10 Poniente no. 502, col. Centro, Puebla.</a></td>
+              <td>222 242 1694 </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Puebla</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B027'42.3%22N+97%C2%B023'26.6%22W/@18.4617651,
+                -97.3929227,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.46176!4d-97.390734
+                " rel="noopener noreferrer" target="_blank">Novedades Karina Calle 2 da. de Agustín a Cacho no. 118-B, col. Centro,
+                 Tehuacán. </a></td>
+              <td>238 371 7464 238 383 6162 </td>
+              <td></td>
+            </tr>          
+           <tr>
+              <td>Querétaro</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B033'38.4%22N+100%C2%B024'43.8%22W/@20.560667,-100.4143487,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.560662!4d-100.41216
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Corregidora Plaza Pabellón Campestre Local 15 en 
+                Priv. de Zaragoza No. 10. Col. Ampliación San José de los Olvera, Querétaro. </a></td>
+              <td>442 111 2454 </td>
+              <td> Lunes a Sábado de 11:00 a 19:30 horas. </td>
+            </tr>
+              <tr>
+                <td>Querétaro</td>
+                <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B035'13.6%22N+100%C2%B023'30.8%22W/@20.587101,-100.3940797,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.587096!4d-100.391891
+                  " rel="noopener noreferrer" target="_blank">Victoria Cosméticos Allende Sur no. 74 B. Col. Centro, Querétaro</a></td>
+                <td>442 212 0291</td>
+                <td></td>
+              </tr> 
+            <tr>
+              <td>Querétaro</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B034'09.0%22N+100%C2%B022'36.3%22W/@20.56918,-100.3789457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.569175!4d-100.376757
+                " rel="noopener noreferrer" target="_blank">Boutique Cosméticos Islas Aleutianas No. 224, Col. Loma Linda, Querétaro </a></td>
+              <td>442 223 5610 </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Querétaro</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Calle+Benito+Ju%C3%A1rez+Nte.+161,+Centro,+76000+Santiago+de+Quer%C3%A9taro,+Qro./@20.5979293,-100.3966523,17z/data=!4m13!1m7!3m6!1s0x85d35b282ba2fd59:0x30e307156f9a0c1d!2sCalle+Benito+Ju%C3%A1rez+Nte.+161,+Centro,+76000+Santiago+de+Quer%C3%A9taro,
+              +Qro.!3b1!8m2!3d20.5979293!4d-100.3944636!3m4!1s0x85d35b282ba2fd59:0x30e307156f9a0c1d!8m2!3d20.5979293!4d-100.3944636
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Querétaro<br> Calle Benito Juarez Norte 161, Col. Centro, </a></td>
+              <td>442 200 7030</td>
+              <td>Lunes a Sábado de 10:30 a 15:00 horas y de
+              16:00 a 19:00 horas</td>
+            </tr>
+
+            <tr>
+              <td>Quintana Roo</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/21%C2%B008'24.6%22N+86%C2%B051'11.1%22W/@21.140177,-86.8552677,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.140177!4d-86.853079
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Cancún La Gran Plaza Cancún Local 16-1 en Av. Nichupte Mz. 18. Col. SM 51, Cancún</a></td>
+              <td>998 206 1118</td>
+              <td>Lunes a Domingo de 11:00 a 21:00 horas.</td>
+            </tr>
+            <tr>
+              <td>Quintana Roo</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B031'16.2%22N+88%C2%B019'19.2%22W/@18.521177,-88.3241777,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.521177!4d-88.321989
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Chetumal Plaza Las Américas Chetumal Local 43 en Av. Insurgentes Km. 5.025. Col. Emancipación, Chetumal. </a></td>
+              <td> 999 980 3301 <br> 999 173 5316</td>
+              <td>Lunes a Domingo de 10:00 a 21:30 horas.</td>
+            </tr>
+   <tr>
+              <td>Quintana Roo</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/search/Plaza+Las+Am%C3%A9ricas+Loc-65+en+Paseo+Central+SM-52+MZ-1+LT-1.+Col.+Nuevo+Centro+Urbano,+Playa+Del+Carmen./@20.6483704,-87.0824847,18z
+                " rel="noopener noreferrer" target="_blank"> Bissú Boutique Playa Del Carmen Plaza Las Américas Loc-65 en Paseo Central SM-52 MZ-1 LT-1. Col. Nuevo Centro Urbano, Playa del Carmen.</a></td>
+              <td>999 980 3301 <br> 999 173 5316</td>
+              <td>Lunes a Domingo de 10:00 a 22:00 horas</td>
+            </tr>
+
+             <tr>
+            <td>Quintana Roo</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B058'33.1%22N+89%C2%B035'47.2%22W/@20.975849,-89.5986357,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.975849!4d-89.596447
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Playa del Carmen Centro Comercial Centro Maya Loc. 72, en Calle 41 Sur esq. Carr. Cancún-Tulum No. 2100, Col. Playacar. Playa del Carmen </a></td>
+            <td>984 803 8506 </td>
+            <td></td>
+          </tr>
+            <tr>
+              <td>Quintana Roo</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B037'30.7%22N+87%C2%B005'01.4%22W/@20.62518,-87.0859067,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.62518!4d-87.083718
+                " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Playa Centro 45 Avenida Sur Esq- C3 Sur S/N. Col. Centro, Playa del Carmen. </a></td>
+              <td>984 109 4164</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Quintana Roo</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B037'35.4%22N+87%C2%B004'43.1%22W/@20.626487,-87.0808157,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.626487!4d-87.078627
+                " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Playa Las Américas Paseo Central Smz 52 Mz 1 Lote 1Local 69. Col. Nuevo Centro Urbano, Playa del Carmen. </a></td>
+              <td>984 803 0704</td>
+              <td></td>
+            </tr>
+           <tr>
+              <td>San Luis Potosí</td>
+              <td><a  draggable="false" href=" https://www.google.com.mx/maps/place/22%C2%B009'15.7%22N+100%C2%B058'41.4%22W/@22.154369,-100.9803647,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.154369!4d-100.978176
+                " rel="noopener noreferrer" target="_blank">Distribuidora AVA Mier y Terán no. 268, col. Centro, San Luis Potosí. </a></td>
+              <td>444 812 9186 </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>San Luis Potosí</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B009'19.9%22N+100%C2%B058'42.9%22W/@22.155532,-100.9807827,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.155532!4d-100.978594
+                " rel="noopener noreferrer" target="_blank">Alexan Zaragoza no. 125-A, col. Centro, San Luis Potosí. </a></td>
+              <td>444 810 4210 </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>San Luis Potosí</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B009'04.8%22N+100%C2%B058'51.5%22W/@22.151319,-100.9831557,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.151319!4d-100.980967
+                " rel="noopener noreferrer" target="_blank">Alexan Av. Venustiano Carranza no. 483-E, col. Centro, San Luis Potosí.</a></td>
+              <td>444 833 7432 </td>
+              <td></td>
+            </tr>
+<tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/24%C2%B048'02.2%22N+107%C2%B023'43.3%22W/@24.800614,-107.3975477,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.800614!4d-107.395359
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Culiacán <br>Av. Domingo Rubí No. 455 Norte. Col. Centro. Culiacán Culiacán. </a></td>
+              <td>667 712 7099 </td>
+              <td>Lunes a Sábado de 9:00 a 20:00 horas. Domingo de 9:00 a 14:00 horas.</td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B012'10.7%22N+106%C2%B025'14.9%22W/@23.2029769,-106.4229847,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.202972!4d-106.420796 
+                " rel="noopener noreferrer" target="_blank">Joan Mazatlan. Calle Aquiles Serdan No. 1813, Col. Centro, Mazatlán. </a></td>
+              <td>669 981 2375 </td>
+              <td>Lunes a Sábado de 9:00 a 20:00 horas y Domingo de 9:00 a 14:00 horas  </td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B013'45.1%22N+106%C2%B024'09.7%22W/@23.2292049,-106.4048877,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.2292!4d-106.402699
+                " rel="noopener noreferrer" target="_blank">
+                Importaciones Sanfri Carretera Internacional no. 2926, col. Villas del Estero, Mazatlán.</a></td>
+              <td>669 986 6471</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B014'17.0%22N+106%C2%B026'16.7%22W/@23.2380579,-106.4401637,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.238053!4d-106.437975
+                "rel="noopener noreferrer" target="_blank">Exótica Av. Reforma y Apolo s/n L F14, col. Alameda, Mazatlán.</a></td>
+                <td>669 986 5886</td>
+                <td></td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/24%C2%B047'20.5%22N+107%C2%B023'28.4%22W/@24.7890189,-107.3934207,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.789014!4d-107.391232
+                "rel="noopener noreferrer" target="_blank">Mercado de Importaciones Domingo Rubí Norte no. 160, col. Centro, Culiacán.</a></td>
+              <td>667 760 2859</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/24%C2%B048'32.8%22N+107%C2%B023'44.9%22W/@24.8091019,-107.3979897,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.809097!4d-107.395801
+                
+                " rel="noopener noreferrer" target="_blank">Cosmetic City Juan Carrasco no. 463, col. Centro, Culiacán. </a></td>
+              <td>667 259 1294</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B047'17.1%22N+108%C2%B059'34.6%22W/@25.7880868,-108.9951317,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.788082!4d-108.992943
+                " rel="noopener noreferrer" target="_blank">Cosméticos La Pitaya Guillermo Prieto no. 423 sur, col. Centro, Los Mochis.</a></td>
+              <td>668 815 1364</td>
+              <td></td>
+            </tr>
+              <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B047'17.1%22N+108%C2%B059'34.6%22W/@25.7880868,-108.9951317,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.788082!4d-108.992943
+                " rel="noopener noreferrer" target="_blank">Joan Ley Vieja<br> Plaza Ley Local 5 en Calle Ejercito Mexicano y Río Piaxtla S/N, Col. Palos Prietos, Mazatlán. </a></td>
+              <td>669 981 2194</td>
+              <td>Lunes a Sábado de 10:00 a 19:30 horas y Domingo de 9:00 a 14:00 horas</td>
+            </tr>
+
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B013'49.4%22N+106%C2%B024'20.3%22W/@23.2303789,-106.4078397,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.230374!4d-106.405651
+                " rel="noopener noreferrer" target="_blank">Joan Juárez <br> Calle 13 de Abril No. 704 Int. B, Col. Benito Juarez, Mazatlán.</a></td>
+              <td>669 984 6977</td>
+              <td>Lunes a sábado de 9:00 a 20:00 horas y domingo de 9:00 a 14:00 horas. </td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B015'34.0%22N+106%C2%B022'51.8%22W/@23.2594399,-106.3832407,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.259435!4d-106.381052
+                " rel="noopener noreferrer" target="_blank">Joan Villa Verde<br> Mercado Hacienda Victoria Local 21 en Calle Manuel J. Clouthier No. 8901, Mazatlán.</a></td>
+              <td>669 119 5264</td>
+              <td>Lunes a Sábado de 10:00 a 19:00 horas y Domingo de 9:00 a 14:00 horas.
+            </td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/24%C2%B047'46.6%22N+107%C2%B021'46.1%22W/@24.7962769,-107.3650047,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.796272!4d-107.362816
+                " rel="noopener noreferrer" target="_blank">Joan Carrasco<br> Av. Juan Carrasco No.132-4 Nte., Col. Centro. Culiacán </a></td>
+              <td>667 713 5885</td>
+              <td>Lunes a Sábado de 9:00 a 20:00 horas y Domingo de 9:00 a 14:00 horas </td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/24%C2%B048'36.8%22N+107%C2%B023'04.7%22W/@24.8102189,-107.3868197,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.810214!4d-107.384631
+                " rel="noopener noreferrer" target="_blank">Joan Mercado<br> Calle Angel Flores S/N Local 75-E, Col. Centro., Culiacán.</a></td>
+              <td>667 715 2442</td>
+              <td>Lunes a Sábado de 9:00 a 19:00 horas y Domingo de 9:00 a 14:00 horas</td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B027'29.9%22N+108%C2%B005'08.5%22W/@25.4583048,-108.0878727,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.4583!4d-108.085684
+                " rel="noopener noreferrer" target="_blank">Joan Guamuchil <br>Escobedo No. 242 Sur, Col. Centro. Guamuchil </a></td>
+              <td>673 732 0366</td>
+              <td>Lunes a Sábado de 9:00 a 19:30 horas y Domingo de 9:00 a 14:00 horas</td>
+            </tr>
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B033'39.8%22N+108%C2%B027'38.3%22W/@25.5610578,-108.4628237,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.561053!4d-108.460635
+                " rel="noopener noreferrer" target="_blank">Joan Zaragoza<br> Zaragoza No.  949, Col. Centro, Guasave.</a></td>
+              <td>687 872 6277</td>
+              <td>Lunes a Sábado de 9:00 a 19:30 horas y Domingo de 9:00 a 14:00 horas.</td>
+            </tr>
+           
+            <tr>
+              <td>Sinaloa</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B047'29.8%22N+108%C2%B059'32.7%22W/@25.7916008,-108.9946147,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.791596!4d-108.992426
+                " rel="noopener noreferrer" target="_blank">Distribuidora Natalia J.M. Morelos No. 320 Pte. Local -2, Col. Centro. Los Mochis </a></td>
+              <td>668 817 3619</td>
+              <td></td>
+            </tr>
+<!-- Alta Distribuidores de Sinaloa -->
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/
+        @24.8077732,-107.3972783,3a,75y,96.78h,86.96t/data=!3m6!1e1!3m4!1sVuD_4G4jzau66axqWOYZYw!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Joan Miguel Hidalgo <br> Av. Miguel Hidalgo No. 248, Col. Centro, Culiacán.</a></td>
+    <td>667 771 33820</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/search/Joan+Fiesta.
+        +Insurgentes+No.+970+Local+26-B,+Colonia+Centro+Culiac%C3%A1n/@24.7950005,-107.4135739,17z/data=!3m1!4b1" rel="noopener noreferrer" target="_blank">
+        Joan Fiesta<br> Insurgentes No. 970 Local 26-B, Col. Centro, Culiacán.</a></td>
+    <td>667 714 2945</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/place/Av.+Benjam%C3%ADn+Hill+4497,
+        +Infonavit+Barrancos,+Barrancos,+80189+Culiac%C3%A1n+Rosales,+Sin./@24.751328,-107.4287965,18z/data=!4m8!1m2!2m1!1s+Avenida+Benjamin+Gil+No.+4497+con+Andador+Enrique+Peres+Arce+Colonia+Infonavit,+Culiac%C3%A1n.!3m4!1s0x86bcd108fbea8d31:0x56f4a535fca97f58!8m2!3d24.7510051!4d-107.4287742" rel="noopener noreferrer" target="_blank">
+        Joan Barrancos<br> Av. Benjamin Gil No. 4497 con Andador Enrique Peres Arce, Col. Infonavit, Culiacán.</a></td>
+    <td></td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/@24.8060192,-107.3962774,3a,75y,244.77h,100.5t/data=!3m6!1e1!3m4!1sz3iPp_IBdzo3QAgEMscF3A!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Joan Rubi. <br> Domingo Rubi No. 159-C, Col. Centro, Culiacán</a></td>
+    <td>667 712 7099</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+
+
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/search/Joan+Humaya.+Enrique+Cabrera+No.+3013,+Colonia+Humaya.,+Culiac%C3%A1n./@24.8221002,-107.4179524,17z/data=!3m1!4b1" rel="noopener noreferrer" target="_blank">
+        Joan Humaya <br> Blvd. Enrique Cabrera No. 3013, Col. Humaya., Culiacán.</a></td>
+    <td>667 721 3020</td>
+    <td>Lunes a Sábado de 9:00 a 19:30 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Blvd.+Las+Torres,+Culiac%C3%A1n+Rosales,
+        +Sin./@24.7753185,-107.4562744,17z/data=!4m8!1m2!2m1!1sBoulevard+La+Torres+Numero+666++Local+6,+Colonia+Terranova,+Culiac%C3%A1n.!3m4!1s0x86bcd037e1c287cf:0x4b4482f4a419ae18!8m2!3d24.7749882!4d-107.456291" rel="noopener noreferrer" target="_blank">
+        Joan Terranova<br> Blvd. Las Torres No. 666  Local 6, Col. Terranova, Culiacán.</a></td>
+    <td>667 173 9397</td>
+    <td>Lunes a Sábado de 10:00 a 19:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Paseo+San+Isidro/@24.7556774,-107.405546,
+        18z/data=!4m8!1m2!2m1!1sJoan+San+Isidro.+Blvd.+Paseo+de+los+Ganaderos+Numer.1787+Interior+45,+colonia+Lomas+de+San+Isidro,+Culiac%C3%A1n.!3m4!1s0x0:0x3e177cdadfd4da51!8m2!3d24.7558727!4d-107.4025023" rel="noopener noreferrer" target="_blank">
+        Joan San Isidro<br> Blvd. Paseo de los Ganaderos No.1787 Int. 45, Col. Lomas de San Isidro, Culiacán.</a></td>
+    <td>667 688 5027</td>
+    <td>Lunes a Sábado de 10:00 a 20:00 horas. y Domingo de 10:00 a 20:00 horas.</td>
+</tr>
+
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/INE/@25.4603747,-108.0793166,
+        17z/data=!3m1!4b1!4m5!3m4!1s0x86bb87ead6d82921:0xc325d8d27b8236cc!8m2!3d25.4603747!4d-108.0771279" rel="noopener noreferrer" target="_blank">
+        Joan Evora<br> Calle Carret. Mexico-Nogales S/N Local 17-C, Col. Morelos, Guamuchil.</a></td>
+    <td>673 688 0013</td>
+    <td>Lunes a Sábado de 10:30 a 19:30 horas. y Domingo de 10:30 a 19:30 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/@25.561003,-108.4606832,3a,75y,
+        54.57h,79.06t/data=!3m6!1e1!3m4!1s70xUF86YvJZhXRAqPLv5CQ!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Joan Adoc<br> Calle Ignacio Zaragoza Corregidora y Alvaro Obregon No. 808, Col. Centro, Guasave.</a></td>
+    <td>687 721 1301</td>
+    <td>Lunes a Sábado de 10:00 a 19:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/search/Joan+Peimbert+
+        Calle+Peimbert+Camacho+Interior+2-D,+Colonia+Angel+Flores,+Guasave./@25.5667601,-108.4726385,17z/data=!3m1!4b1" rel="noopener noreferrer" target="_blank">
+        Joan Peimbert<br> Calle Peimbert Camacho S/N Int. 2-D, Col. Angel Flores, Guasave.</a></td>
+    <td>687 871 1841</td>
+    <td>Lunes a Sábado de 10:00 a 19:00 horas. y Domingo de 10:00 a 19:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/search/Joan+Academia.+Calle+16+Septiembre+Numero+800,
+        +Colonia+Centro,+Mazatl%C3%A1n/@23.2084878,-106.4180481,17z" rel="noopener noreferrer" target="_blank">
+        Joan Academia<br>Calle 16 Septiembre Numero 800, Col. Centro, Mazatlán.</a></td>
+    <td>669 981 4370</td>
+    <td>Lunes a Sábado de 09:00 a 13:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/place/JOAN+PINO+SU%C3%81REZ/@23.2260992,
+        -106.4005514,17z/data=!3m1!4b1!4m5!3m4!1s0x869f5328a6837ed9:0x28f72fd6b8996485!8m2!3d23.2260992!4d-106.3983627" rel="noopener noreferrer" target="_blank">
+        Joan Pino Suarez<br> Calle José Ma. Pino Suarez No. 103, Col. Azteca, Mazatlán.</a></td>
+    <td>669 112 4119</td>
+    <td>Lunes a Sábado de 10:00 a 19:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/place/Soriana+H%C3%ADper+-+Santa+Rosa/@23.2582702,
+        -106.4083014,17z/data=!3m1!4b1!4m5!3m4!1s0x869f5331d26a730d:0x6e48e9b6a0a2954c!8m2!3d23.2582702!4d-106.4061127" rel="noopener noreferrer" target="_blank">
+        Joan Santa Rosa<br> Av. Luis Donaldo Colosio No. 17301 Local 15, Col. Valle Dorado, Mazatlán.</a></td>
+    <td>669 940 4235</td>
+    <td>Lunes a Sábado de 11:00 a 20:00 horas. y Domingo de 11:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/search/Joan+Cedis+German+Evers+2101,
+        +Colonia+Centro,+Mazatl%C3%A1n./@23.2089085,-106.4185988,17z/data=!3m1!4b1" rel="noopener noreferrer" target="_blank">
+        Joan Cedis Almacen<br> Calle German Evers No. 2101, Col. Centro, Mazatlán.</a></td>
+    <td>669 910 3475</td>
+    <td>Lunes a Sábado de 7:00 a 18:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/search/Joan+Ley+Mar.
+        +Calle+Mar+Numero+1,+Colonia+Benito+Juarez+Mazatl%C3%A1n/@23.2454498,-106.4209854,17z/data=!3m1!4b1" rel="noopener noreferrer" target="_blank">
+        Joan Ley Mar<br> Calle Mar No. 1, Col. Benito Juarez, Mazatlán.</a></td>
+    <td>669 983 2067</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 20:00 horas..</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/place/Gran+Plaza+Mazatl%C3%A1n/@23.2393059,
+        -106.4404882,17z/data=!3m1!4b1!4m5!3m4!1s0x869f536092ea14df:0x3834aadffd718487!8m2!3d23.2393059!4d-106.4382995" rel="noopener noreferrer" target="_blank">
+        Joan Adoc Gran Plaza<br> Av. Reforma S/N Local E-11, Col. Alameda, Mazatlán.</a></td>
+    <td>669 983 8727</td>
+    <td>Lunes a Sábado de 11:00 a 20:00 horas. y Domingo de 11:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Paseo+Bicentenario/@23.2549904,-106.43283,
+        18z/data=!4m8!1m2!2m1!1s+Avenida+Bicentenario+Ju%C3%A1rez+1801+Local+L-07,+Colonia+Francisco+Villa,+Mazatl%C3%A1n.!3m4!1s0x869f53504d5dfecd:0xfc57d1314db8ccaf!8m2!3d23.2562119!4d-106.4301363" rel="noopener noreferrer" target="_blank">
+        Joan Bicentenario<br>Av. Bicentenario Juárez No.1801 Local L-07, Col. Francisco Villa, Mazatlán.</a></td>
+    <td>669 688 2089</td>
+    <td>Lunes a Sábado de 11:00 a 20:00 horas. y Domingo de 11:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Miguel+Hidalgo+7,+Gabriel+Leyva,+82040+Mazatl%C3%A1n,
+        +Sin./@23.2062328,-106.4136647,17z/data=!3m1!4b1!4m5!3m4!1s0x869f53bc86e93233:0xf375ee6793de6859!8m2!3d23.2062328!4d-106.411476" rel="noopener noreferrer" target="_blank">
+        Joan Escuinapa<br> Hidalgo No.7, Col. Centro, Mazatlán.</a></td>
+    <td>695 953 0557</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/search/Joan+Las+Palmas.+Plaza+Fiestas+Las+Palmas+Interior+9+en+Alvaro+Obreg%C3%B3n+Mochis./@25.7882404,-108.998934,17z/data=!3m1!4b1" rel="noopener noreferrer" target="_blank">
+    Joan Las Palmas<br> Plaza Fiestas Las Palmas Int.9 en Alvaro Obregón S/N, Mochis.</a></td>
+    <td>668 886 5441</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 20:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@25.7875507,-108.9933016,3a,75y,185.57h,105.22t/data=!3m6!1e1!3m4!1sDbrMt4cBhCMy8oXMhIM1VQ!2e0!7i13312!8i6656" rel="noopener noreferrer" target="_blank">
+        Joan Mochis<br> Guillermo Prieto Esquina Callejón Agustín Melgar No. 459 Sur, Col. Centro, Mochis.</a></td>
+    <td>668 688 5781</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/place/Calle+Guillermo+Prieto+%26+Agust%C3%ADn+Melgar,+Centro,+81200+Los+Mochis,+Sin./@25.7875507,-108.9933016,17z/data=!4m8!1m2!2m1!1sGuillermo+Prieto+Agust%C3%ADn+Melgar+459+Sur+Col.
+        +Centro,+Mochis.!3m4!1s0x86ba2f59963c0291:0x21c4a7795985cae7!8m2!3d25.7875869!4d-108.9932417" rel="noopener noreferrer" target="_blank">
+    Joan Morelos<br> Calle Jose Ma. Morelos No. 320 Pte. Local 2, Col. Centro, Mochis.</a></td>
+    <td>668 818 2223</td>
+    <td>Lunes a Sábado de 9:00 a 19:30 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+<tr>
+    <td>Sinaloa</td>
+    <td><a draggable="false" href="https://www.google.com.mx/maps/place/JOAN+HIDALGO+MOCHIS/@25.788956,-108.9964537,
+        17z/data=!3m1!4b1!4m5!3m4!1s0x86ba2f59d12eaeed:0x159dfcb9a0fb8eee!8m2!3d25.788956!4d-108.994265" rel="noopener noreferrer" target="_blank">
+        Joan Mochis Centro<br>Hidalgo No. 320 Pte., Col. Centro, Mochis.</a></td>
+    <td>668 818 8586</td>
+    <td>Lunes a Sábado de 8:30 a 19:30 horas. y Domingo de 8:30 a 13:30 horas.</td>
+</tr>
+
+
+            <tr>
+              <td>Sonora</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B007'26.6%22N+110%C2%B059'29.7%22W/@29.1240617,-110.9937667,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d29.124057!4d-110.991578
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique Hermosillo Plaza Paloma, Blvd. Lázaro Cárdenas No.700, Local 4, Esquina con Blvd. Solidaridad. Col. Progresista, Hermosillo, Sonora. </a></td>
+              <td>662 688 2312 </td>
+              <td>Lunes a Sábado de 10:00 a 20:00 horas. Domingo 10:00 a 16:00 horas.</td>
+            </tr>
+            <tr>
+              <td>Sonora</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/32%C2%B028'22.1%22N+114%C2%B044'53.0%22W/@32.4728135,-114.7502477,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.472809!4d-114.748059
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique San Luis Rio Colorado Av. Obregón y Calle 27 Esq. Sureste #2700 Int. 1. Col. Burócrata, San Luis Rio Colorado, Sonora </a></td>
+              <td>653 518 3010 </td>
+              <td>Lunes a Sábado de 9:00 a 19:00horas. Domingo 9:00 a 17:00horas</td>
+            </tr>
+            <tr>
+              <td>Sonora</td>
+              <td><a  draggable="false" href="https://www.google.com.mx/maps/place/32%C2%B028'24.1%22N+114%C2%B044'50.7%22W/@32.4733655,-114.7495947,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.473361!4d-114.747406
+                " rel="noopener noreferrer" target="_blank">Bissú Boutique San Luis Rio Colorado Mayoreo Av. Obregón y Calle 27 Esq. Sureste #2700 Int. 2. Col. Burócrata, San Luis Rio Colorado, Sonora</a></td>
+              <td>653 518 3010 </td>
+              <td>Lunes a Sábado de 10:00 a 18:00 horas. Domingo: Cerrado</td>
+            </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B029'17.6%22N+109%C2%B055'53.7%22W/@27.4882147,-109.9337727,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d27.48821!4d-109.931584
+              " rel="noopener noreferrer" target="_blank">¡Aquí es! con las Cholas Sinaloa no. 308 sur, local C, col. Centro, Ciudad Obregón. </a></td>
+             <td>644 998 7854</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B029'33.9%22N+109%C2%B055'56.0%22W/@27.4927547,-109.9344087,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d27.49275!4d-109.93222
+              " rel="noopener noreferrer" target="_blank">El Mayoreo Callejón Bolivia no. 327 sur, col. Centro, Ciudad Obregón.</a></td>
+             <td>644 415 0880</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B005'18.2%22N+110%C2%B056'56.7%22W/@29.0884037,-110.9512837,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d29.088399!4d-110.949095
+              " rel="noopener noreferrer" target="_blank">Don Juan Distribuidora Zoyla Reyna de Palafox no. 75, col. Centro, Hermosillo. </a></td>
+              <td>662 212 0880</td>
+              <td></td>
+             </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B004'06.2%22N+110%C2%B056'24.3%22W/@29.0684037,-110.9422837,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d29.068399!4d-110.940095
+              " rel="noopener noreferrer" target="_blank">Sanfri Le Femme Av. Cultura no. 55 B24, col. Proyecto Río Sonora, Hermosillo. </a></td>
+              <td>662 217 0800</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B004'46.2%22N+110%C2%B057'03.1%22W/@29.0791329,-110.9511981,19z/data=!4m5!3m4!1s0x0:0x0!8m2!3d29.079501!4d-110.950867
+              "rel="noopener noreferrer" target="_blank">Importaciones Eder Juárez no. 104 y Morelia, col. Centro, Hermosillo. </a></td>
+              <td>662 212 2990</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/30%C2%B042'44.7%22N+112%C2%B009'32.2%22W/@30.7124213,-112.1611331,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d30.712406!4d-112.158947
+              " rel="noopener noreferrer" target="_blank">Colors José Clemente Vanegas no. 37, col. Centro, Caborca. </a></td>
+              <td>637 372 6070</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B004'48.7%22N+110%C2%B057'14.8%22W/@29.0794325,-110.9548403,19.5z/data=!4m5!3m4!1s0x0:0x0!8m2!3d29.080182!4d-110.954114
+              " rel="noopener noreferrer" target="_blank">El Surtidito Cosméticos Doctor Noriega No. 92. Col. Centro, Hermosillo.</a></td>
+             <td>662 212 1920</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B006'45.5%22N+110%C2%B059'53.7%22W/@29.1131378,-110.9941279,17.04z/data=!4m5!3m4!1s0x0:0x0!8m2!3d29.112636!4d-110.998249
+              " rel="noopener noreferrer" target="_blank">El Surtidito Cosméticos Plaza El Sahuaro Int. 4 I en Periférico Poniente No. 26. Col. El Sahuaro, Hermosillo.</a></td>
+              <td>662 141 9375</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Av+Cultura+55,+Proyecto+Rio+Sonora+Hermosillo+XXI,+83270+Hermosillo,+Son./@29.0657061,-110.9522157,17.75z/data=!4m5!3m4!1s0x86ce85aad6abd001:0x25b92b908fae7b0c!8m2!3d29.0659537!4d-110.9507469
+              "rel="noopener noreferrer" target="_blank">Mega Eder Galerías Av. Cultura No. 55 B15A. Proyecto Rio Sonora, Hermosillo </a></td>
+              <td>662 210 3320</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/30%C2%B037'30.0%22N+110%C2%B058'03.6%22W/@30.6249379,-110.9679381,20.75z/data=!4m5!3m4!1s0x0:0x0!8m2!3d30.624997!4d-110.967656
+              " rel="noopener noreferrer" target="_blank">La Pequeña Susy Diana Laura R. de Colosio portal 8, col. Centro, Magdalena de Kino. </a></td>
+              <td>632 322 0901</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B004'08.1%22N+109%C2%B027'11.6%22W/@27.068828,-109.4537811,19z/data=!4m5!3m4!1s0x0:0x0!8m2!3d27.06892!4d-109.453212
+              " rel="noopener noreferrer" target="_blank">Don Balo Interior Mercado Municipal Loc. 33 Y 38. Col. Centro, Navojoa</a></td>
+              <td>642 422 1359</td>
+              <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B004'08.1%22N+109%C2%B027'11.6%22W/@27.068828,-109.4537811,19z/data=!4m5!3m4!1s0x0:0x0!8m2!3d27.06892!4d-109.453212
+              " rel="noopener noreferrer" target="_blank">Bellas Cosméticos Plaza Del Mayo Ley Loc. 2 B En Cuauhtémoc No. 1100. Col. Constitución, Navojoa </a></td>
+             <td>642 853 4269</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B007'17.3%22N+110%C2%B057'05.0%22W/@29.1205284,-110.9688597,15.25z/data=!4m5!3m4!1s0x0:0x0!8m2!3d29.121461!4d-110.95139
+              " rel="noopener noreferrer" target="_blank">Distribuidora Castro's Alberto Truqui No. 43-B, Col. Pimentel, Hermosillo </a></td>
+             <td>662 260 0438</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>Sonora</td>
+             <td><a  draggable="false" href="https://www.google.com.mx/maps/place/32%C2%B028'22.1%22N+114%C2%B044'53.0%22W/@32.4725617,-114.7486546,18.5z/data=!4m5!3m4!1s0x0:0x0!8m2!3d32.472809!4d-114.748059
+              " rel="noopener noreferrer" target="_blank">Distribuidora de Belleza de los Pericos Plaza Grande Loc. 12C en Blvd. Solidaridad. Col. Libertad, Hermosillo.</a></td>
+              <td>662 216 0788</td>
+              <td></td>
+           </tr>
+           <tr>
+            <td>Sonora</td> 
+           <td><a  draggable="false" href="https://www.google.com.mx/maps/place/29%C2%B006'59.5%22N+111%C2%B000'11.8%22W/@29.1160704,-111.0043984,18.25z/data=!4m5!3m4!1s0x0:0x0!8m2!3d29.116522!4d-111.003268
+            " rel="noopener noreferrer" target="_blank">Volumen Internacional Blvd. Ignacio Salazar No. 863 esq. República de Honduras. Col. Misión. Hermosillo </a></td>
+            <td>662 118 1113</td>
+            <td></td>   
+          </tr>
+          <tr>
+            <td>Sonora</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B029'24.1%22N+109%C2%B055'58.4%22W/@27.4898957,-109.9334093,19.25z/data=!4m5!3m4!1s0x0:0x0!8m2!3d27.490036!4d-109.932882
+              " rel="noopener noreferrer" target="_blank">La Yaquesita Cosméticos Calle 5 de Febrero No. 414 Sur, entre Galeana y Zaragoza. Col. Centro, Cd. Obregón, Sonora.</a></td>
+              <td>644 221 0489</td>
+              <td></td>  
+          </tr>  
+<!-- Alta Distribuidor Sonora -->
+<tr>
+    <td>Sonora</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/@27.4918023,
+        -109.9308462,3a,75y,183.31h,75.44t/data=!3m6!1e1!3m4!1s35Rb7oJKW5vq2054Id7Djw!2e0!7i16384!8i8192" rel="noopener noreferrer" target="_blank">
+        Joan Obregon<br>No Reelección No. 920 Ote. Local-5, Col. Centro, Obregón.</a></td>
+    <td>644 415 5076</td>
+    <td>Lunes a Sábado de 9:00 a 19:30 horas. y Domingo de 9:00 a 14:00 horas.</td>
+</tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'29.7%22N+92%C2%B054'58.9%22W/@17.9915961,-92.9185467,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.991591!4d-92.916358
+              " rel="noopener noreferrer" target="_blank">Arsabe S. A. de C. V. José María Pino Suárez no. 220, col. Centro, Villahermosa. </a></td>
+            <td>993 312 9897</td>
+            <td></td>
+          </tr> 
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B001'09.1%22N+92%C2%B054'43.1%22W/@18.0191961,-92.9141677,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.019191!4d-92.911979
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Plaza Comercial Sendero Villahermosa Loc. D6A. Cto. Interior Carlos Pellicer Camara No. 1020 Col. Jose Ma. Pino Suárez, Villahermosa </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'52.5%22N+92%C2%B055'10.1%22W/@17.9979261,-92.9216687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.997921!4d-92.91948
+              " rel="noopener noreferrer" target="_blank">Distribuidora El Faraón S.A. de C.V. Hermanos Bastar Zozaya No. 639. Col. Centro, Villahermosa </a></td>
+            <td>993 314 8186</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'52.5%22N+92%C2%B055'10.1%22W/@17.9979261,-92.9216687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.997921!4d-92.91948
+              " rel="noopener noreferrer" target="_blank">Mundimoda Corregidora S/N, Col. Centro, Emiliano Zapata. </a></td>
+            <td>934 343 0171</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B044'33.0%22N+91%C2%B045'54.6%22W/@17.7425071,-91.7673427,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.742502!4d-91.765154
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Corregidora No. 63, Col. Centro, Emiliano Zapata. </a></td>
+            <td>934 343 1111</td> 
+            <td></td> 
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'33.8%22N+92%C2%B055'00.6%22W/@17.9927311,-92.9190197,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.992726!4d-92.916831
+              " rel="noopener noreferrer" target="_blank">Mundimoda Fco. I. Madero No. 705, Col. Centro, Villahermosa. </a></td>
+            <td>993 131 0858</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B045'30.1%22N+92%C2%B035'29.5%22W/@17.7583521,-92.5937277,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.758347!4d-92.591539
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Lerdo de Tejada No. 318, Col. Centro, Macuspana. </a></td>
+            <td>936 362 1347</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B049'58.3%22N+93%C2%B023'29.6%22W/@17.8328721,-93.3937547,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.832867!4d-93.391566
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Rafael Martinez de Escobar No. 68-C, Col. Centro, Huimanguillo. </a></td>
+            <td>917 375 1540</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B010'06.6%22N+93%C2%B001'03.3%22W/@18.1684961,-93.0197737,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.168491!4d-93.017585
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Guillermo Prieto S/N, Col. Centro, Nacajuca. </a></td>
+            <td>914 104 0093</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B023'46.5%22N+93%C2%B012'55.0%22W/@18.3962441,-93.2174777,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.396239!4d-93.215289
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Comonfort 105, Col. Centro, Paraíso.</a></td>
+            <td>933 333 0396</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B031'53.4%22N+92%C2%B039'14.1%22W/@18.5315021,-92.6561157,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.531497!4d-92.653927
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Fco. I. Madero No. 102, Col. Centro, Frontera, Centla.</a></td>
+            <td>913 332 1407</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B048'03.8%22N+91%C2%B032'07.7%22W/@17.8010591,-91.5376697,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.801054!4d-91.535481
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Eusebio Castillo S/N, Col. Centro, Balancan. </a></td>
+            <td> 934 344 0279</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B028'38.6%22N+91%C2%B025'33.9%22W/@17.4773831,-91.4282607,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.477378!4d-91.426072
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Calle 26X21 S/N, Col. Centro, Tenosique.</a></td>
+            <td>934 342 6136</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B003'58.6%22N+93%C2%B010'26.6%22W/@18.0662751,-93.1762487,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.06627!4d-93.17406
+              "rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Hidalgo No. 44, Col. Centro, Cunduacan. </a></td>
+            <td>914 336 1255</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B047'53.8%22N+91%C2%B032'00.4%22W/@17.7982761,-91.5356247,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.798271!4d-91.533436
+              " rel="noopener noreferrer" target="_blank">Mundimoda Calle Arroyo San Marco S/N junto a ADO, Col. El Palenque, Balancan.</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B010'06.2%22N+93%C2%B001'03.2%22W/@18.1683941,-93.0197307,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.168389!4d-93.017542
+              " rel="noopener noreferrer" target="_blank">Mundimoda Guillermo Prieto S/N, Col. Centro, Nacajuca. </a></td>
+            <td>914 104 0093</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B010'08.0%22N+93%C2%B001'15.1%22W/@18.1688991,-93.0230517,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.168894!4d-93.020863
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Plaza Hidalgo No. 62, Col Centro, Jalpa de Mendez. </a></td>
+            <td>914 337 1386</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B058'01.9%22N+92%C2%B057'37.7%22W/@17.9671951,-92.9626477,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.96719!4d-92.960459
+              " rel="noopener noreferrer" target="_blank">Crazy Cosmetics Av. Gregorio Mendez No. 3817-A, Col. Tamulte  Villahermosa.</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B058'01.9%22N+92%C2%B057'37.7%22W/@17.9671951,-92.9626477,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.96719!4d-92.960459
+              " rel="noopener noreferrer" target="_blank">Chacharilandia Av. Gregorio Mendez No. 3817, Col. Tamulte, Villahermosa. </a></td>
+            <td>993 186 0989</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'30.0%22N+92%C2%B055'01.3%22W/@17.9916781,-92.9192027,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.991673!4d-92.917014
+              " rel="noopener noreferrer" target="_blank">Crazy Cosmetics Fco. I. Madero No. 629, Col. Centro, Villahermosa. </a></td>
+            <td>993 131 2008</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'28.0%22N+93%C2%B022'33.6%22W/@17.9911281,-93.3781917,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.991123!4d-93.376003
+              " rel="noopener noreferrer" target="_blank">Crazy Cosmetics Morelos No. 106, Col. Centro, Cardenas. </a></td>
+            <td>937 322 7777</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'26.8%22N+93%C2%B023'01.8%22W/@17.9907871,-93.3860107,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.990782!4d-93.383822
+              " rel="noopener noreferrer" target="_blank">Chacharilandia Abraham Bandala No. 715, Col. Pueblo Nuevo, Cardenas</a></td>
+            <td>937 322 9304</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tabasco</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B045'39.9%22N+92%C2%B035'52.1%22W/@17.7610981,-92.5999817,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.761093!4d-92.597793
+              " rel="noopener noreferrer" target="_blank">Crazy Cosmetics Mariano Abasolo No. 43, Col. Centro, Macuspana.</a></td>
+            <td>936 362 1208</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B043'53.3%22N+99%C2%B008'47.7%22W/@23.7314839,-99.1487627,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.731479!4d-99.146574
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Cd. Victoria Miguel Hidalgo No. 732 entre 10 y 11 (Lauro Aguirre Y Hnos. Vázquez Gómez). Col. Centro, Cd. Victoria.</a></td>
+            <td>811 097 1065</td>
+            <td>Lunes a Sábado de 9:00 a 19:30 horas. y Domingo de 10:00 a 17:30 horas</td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B045'47.3%22N+99%C2%B008'28.6%22W/@23.7631369,-99.1434577,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.763132!4d-99.141269
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Cd. Victoria II Centro Comercial Gran'd Campestre Int. Loc. 33-34, en Blvd. Tamaulipas No. 3262, Col. Villa Real. </a></td>
+            <td>811 097 1065 </td>
+            <td>Lunes a jueves de 9:00 a 20:00 horas., Viernes a Domingo de 9:00 a 20:30 horas.</td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B026'43.6%22N+99%C2%B031'14.9%22W/@27.4454567,-99.5229857,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d27.445452!4d-99.520797
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Nuevo Laredo Av. Reforma No. 5601 Loc. 83. CC. Paseo Reforma entre Emiliano Zapata y Lago de Chapala. Col. Las Alamedas, Nuevo Laredo. </a></td>
+            <td>811 097 1065</td>
+            <td>Lunes a Domingo de 10:00 a 20:30 horas.</td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/26%C2%B003'12.6%22N+98%C2%B021'51.5%22W/@26.0534998,-98.3664797,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.053495!4d-98.364291
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Reynosa C.C. Plaza Periférico Loc-D2 en Carretera Reynosa-Mty cruce Libramiento Sur#1000. Col. Real de Jarachinas Sur. Reynosa Teléfono</a></td>
+            <td>811 097 1065 </td>
+            <td>Lunes a Domingo de 9:00horas. a 20:30 horas</td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B015'07.1%22N+97%C2%B051'52.9%22W/@22.251968,-97.8668827,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.251963!4d-97.864694
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Tampico Sucursal HEB Loc. 13, en Av. Ejército Mexicano No. 717, Col. Tampico. </a></td>
+            <td>811 097 1065 </td>
+            <td>Lunes a Domingo de 11:00 a 20:30 horas.</td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B051'58.9%22N+97%C2%B032'44.5%22W/@25.8663728,-97.5478717,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.866368!4d-97.545683
+              " rel="noopener noreferrer" target="_blank">Chikis Accesorios Av. Constituyentes no. 300, col. Hacienda Quinta Real, Matamoros</a></td>
+            <td>868 845 6370</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B052'47.0%22N+97%C2%B030'44.6%22W/@25.8797378,-97.5145897,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.879733!4d-97.512401
+              " rel="noopener noreferrer" target="_blank">Kositazz Abasolo no. 147, col. Centro, Matamoros. </a></td>
+            <td>868 819 9342</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B044'30.1%22N+98%C2%B057'46.2%22W/@22.7416879,-98.9650157,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.741683!4d-98.962827
+              " rel="noopener noreferrer" target="_blank">Chikis Accesorios Guerrero y Libertad no. 900, local 15, col. Centro, Ciudad Mante. </a></td>
+            <td>831 233 2855</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B045'14.9%22N+98%C2%B059'11.1%22W/@22.7541419,-98.9886077,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.754137!4d-98.986419
+              " rel="noopener noreferrer" target="_blank">Bella Forever Morelos no. 203 sur, col. Centro, Ciudad Mante. </a></td>
+            <td>831 102 6247</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B050'25.6%22N+97%C2%B030'29.1%22W/@25.8404588,-97.5102747,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.840454!4d-97.508086
+              " rel="noopener noreferrer" target="_blank">Renatta La Barata Centro Comercial Plaza Fiesta Loc. G-8. Av. Pedro Cárdenas No. 100 Col. Victoria, Matamoros. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B050'25.6%22N+97%C2%B030'29.1%22W/@25.8404588,-97.5102747,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.840454!4d-97.508086
+              " rel="noopener noreferrer" target="_blank">Renatta La Barata Centro Comercial Plaza Fiesta Loc. G-13. Av. Pedro Cárdenas No. 100 Col. Victoria, Matamoros. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/25%C2%B051'27.3%22N+97%C2%B032'13.8%22W/@25.8575778,-97.5393477,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.857573!4d-97.537159
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Plaza Sendero Loc. D-10-H. Av. Constituyentes esq. Blvd. Casa Blanca Col. Hacienda Quinta Real, Matamoros. </a></td>
+            <td>811 097 1065</td>
+            <td></td>    
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/26%C2%B003'13.0%22N+98%C2%B021'51.8%22W/@26.0536258,-98.3665857,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.053621!4d-98.364397
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Plaza Sendero Periférico Loc. G-8, Carr. Reynosa-Monterrey cruce libramiento Sur No. 1000 Col. Real de Jarachinas Sur, Reynosa. </a></td>
+            <td>811 097 1065</td>
+            <td></td>  
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/26%C2%B004'29.9%22N+98%C2%B019'04.5%22W/@26.0749738,-98.3200957,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.074969!4d-98.317907
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Plaza Real Heb Reynosa Loc. C-9 Heb., Blvd. Hidalgo No. 101 Reynosa. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/26%C2%B003'13.0%22N+98%C2%B021'51.8%22W/@26.0536258,-98.3665857,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.053621!4d-98.364397
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Plaza Sendero Periférico Loc. D-2, Carr. Reynosa-Monterrey cruce libramiento Sur No. 1000 Col. Real de Jarachinas Sur, Reynosa</a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href=" https://www.google.com.mx/maps/place/26%C2%B002'56.6%22N+98%C2%B020'51.3%22W/@26.0490668,-98.3497617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.049062!4d-98.347573
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Mi Tiendita del Ahorro Loc. 33 y 34 Lib. Monterrey-Matamoros. Col. Lomas de Jarachina Norte, Reynosa.</a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/26%C2%B004'20.1%22N+98%C2%B019'19.3%22W/@26.0722658,-98.3242047,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d26.072261!4d-98.322016
+              " rel="noopener noreferrer" target="_blank" >Renatta La Baratta Plaza Comercial Soriana Hidalgo, Loc. 7-B. Blvd. Hidalgo y Fuente de Diana Km. 101 S/N. Frac. Las Fuentes, Reynosa. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B026'42.1%22N+99%C2%B031'10.0%22W/@27.4450247,-99.5216397,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d27.44502!4d-99.519451
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Paseo Reforma Loc. A-74. Av. Reforma No. 5601 entre Emiliano Zapata y Lago de Chapala. Nuevo Laredo. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B027'38.8%22N+99%C2%B030'42.0%22W/@27.4607817,-99.5138417,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d27.460777!4d-99.511653
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Heb Loc. A-10. Av. Reforma No. 4400 Col. México Nuevo. Nuevo Laredo</a></td>
+            <td> 811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B015'13.4%22N+97%C2%B051'19.5%22W/@22.253716,-97.8576077,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.253711!4d-97.855419
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Soriana Ejército Loc. 4. Diagonal Norte-Sur, Av. Ejército Mexicano Tampico. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B016'59.7%22N+97%C2%B050'54.0%22W/@22.2832639,-97.8505167,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.283259!4d-97.848328
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Soriana Ampliación Madero Loc. 9. Av. Monterrey Norte No. 700 Col. Unidad Nacional Ampliación, Ciudad Madero</a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B017'53.9%22N+97%C2%B052'36.0%22W/@22.2983229,-97.8788517,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.298318!4d-97.876663
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Soriana Aeropuerto Loc. 31. Prolongación Av. Hidalgo Calle Aeropuerto Col. Francisco Javier Mina, Tampico. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B023'19.0%22N+97%C2%B056'31.9%22W/@22.3886059,-97.9443827,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.388601!4d-97.942194
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Chedrahui Loc. 1-B. Emilio Portes Gil No. 1903 Col. Tamaulipas, Tampico. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B023'19.0%22N+97%C2%B056'31.9%22W/@22.3886059,-97.9443827,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d22.388601!4d-97.942194
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Plaza Altamira Loc. 9 y 10. Blvd. Puerto Industrial Primes No. 105 esq. Con Blvd. Ignacio Allende Col. Centro, Altamira</a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B043'53.9%22N+99%C2%B008'51.5%22W/@23.7316509,-99.1498307,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.731646!4d-99.147642
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Calle Miguel Hidalgo No. 633-B entre las calles de Lauro Aguirre y Matias S. Canales Col. Centro, Ciudad Victoria. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B043'53.9%22N+99%C2%B008'47.4%22W/@23.7316459,-99.1486777,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.731641!4d-99.146489
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Calle Hidalgo No. 732 entre las calles de Lauro Aguirre y Hnos. Vázquez Gómez. Col. Centro, Ciudad Victoria. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B044'57.3%22N+99%C2%B008'25.8%22W/@23.7492549,-99.1426867,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.74925!4d-99.140498
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Soriana Palmas Local K7. Calle Juan B Tijerina No. 2033 cruce con Fidel Velazquez y Hombres Ilustres Col. Los Arcos, Ciudad Victoria.</a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B045'47.5%22N+99%C2%B008'25.7%22W/@23.7631899,-99.1426697,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.763185!4d-99.140481
+              " rel="noopener noreferrer" target="_blank">Centro Comercial Grand Campestre Local 33 y 34. Blvd. Tamaulipas No. 3262, Col. Centro, Ciudad Victoria. </a></td>    
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B045'11.2%22N+99%C2%B008'56.2%22W/@23.7531199,-99.1511367,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.753115!4d-99.148948
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Plaza Soriana Satelite Local 15. Blvd. Lopez Mateos No. 125 entre Norberto Treviño Zapata y Manuel Gonzalez Jr. Col. Doctor Treviño Zapata, Ciudad Victoria. </a></td>
+             <td>811 097 1065</td>
+             <td></td> 
+            </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B045'32.9%22N+99%C2%B008'29.1%22W/@23.7591539,-99.1436097,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.759149!4d-99.141421
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Centro Comercial Heb. Av. Michoacán No. 2850 entre Av. Tamaulipas y calle Cristobal Colón. Col. Fracc. Valle de Aguayo. Cd. Victoria. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B044'26.1%22N+99%C2%B008'04.8%22W/@23.7405739,-99.1368517,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.740569!4d-99.134663
+              "rel="noopener noreferrer" target="_blank">Renatta La Baratta Walmart Central Local 2. Felipe Berriozabal No. 1810 entre Av. Jose Sulaimán Chagnon y José de Escandón. Col. del Norte. Cd. Victoria. </a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B045'09.5%22N+99%C2%B009'23.3%22W/@23.7526339,-99.1586617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.752629!4d-99.156473
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Walmart Adelitas Local 11. Blvd. Adolfo López Mateos No. 150 entre Jesús Elias Peña y Fermin Legorreta. Col. Fidel Velazquez. Cd. Victoria</a></td>
+            <td>811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B045'05.6%22N+99%C2%B008'23.9%22W/@23.7515629,-99.1421607,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.751558!4d-99.139972
+              " rel="noopener noreferrer" target="_blank">Renatta La Baratta Mega Comercial Mexicana Blvd. Fidel Velazquez y Av. Familia Rotaria S/N Col. Doctores. Cd. Victoria. </a></td>
+            <td> 811 097 1065</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B012'23.1%22N+97%C2%B051'11.3%22W/@22.206423,-97.8553207,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.206418!4d-97.853132
+              " rel="noopener noreferrer" target="_blank">Novedad Nic Rivera no. 203-205 oriente, col. Centro, Tampico. </a></td>
+            <td>833 214 6642</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B016'31.4%22N+97%C2%B049'52.6%22W/@22.2753809,-97.8334687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.275376!4d-97.83128
+              " rel="noopener noreferrer" target="_blank">Novedades Cinthya Pedro José Méndez no. 109, col. Centro, Tampico. </a></td>
+            <td>833 212 2545</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B044'37.4%22N+98%C2%B058'16.2%22W/@22.7437359,-98.9733657,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.743731!4d-98.971177
+              " rel="noopener noreferrer" target="_blank">Verflor Benito Juárez no. 102-A sur, col. Centro, Tampico. </a></td>
+            <td>833 219 1894</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/27%C2%B027'31.7%22N+99%C2%B030'49.8%22W/@27.4588207,-99.5160127,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d27.458816!4d-99.513824
+              " rel="noopener noreferrer" target="_blank">
+
+              Siempre Bella<br>Av. Reforma y 15 de Septiembre, local 15, col. Campestre, Nuevo Laredo. </a></td>
+            <td>867 715 444</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B015'44.6%22N+97%C2%B052'26.4%22W/@22.2623889,-97.8761837,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.262384!4d-97.873995
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Tres Arcos Centro Comercial Tres Arcos Local IC-8 en Av. Regiomontana #102. Fracc. Lomas del Naranjal, Tampico. </a></td>
+            <td>833 194 0319</td>  
+            <td></td>    
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B013'57.7%22N+97%C2%B050'21.2%22W/@22.232696,-97.8414057,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.232691!4d-97.839217
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Soriana Ampliación Av. Monterrey #700 Nte. Local 16. Ampliacion Unidad Nacional, Cd. Madero</a></td>
+            <td>833 194 0319</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B016'47.1%22N+97%C2%B050'32.9%22W/@22.2797569,-97.8446617,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.279752!4d-97.842473
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Madero Obregón Alvaro Obregon #105 Sur. Zona Centro, Cd.Madero. </a></td>
+              <td>833 194 0319</td>
+              <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B015'41.1%22N+97%C2%B052'25.7%22W/@22.2614259,-97.8760047,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.261421!4d-97.873816
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Plaza Cristal Centro Comercial Plaza Cristal Local 12 Seccion E en Av. Hidalgo Con Regiomontana. Col. Lomas del Naranjal, Tampico</a></td>
+            <td>833 194 0319</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B014'53.5%22N+97%C2%B050'16.2%22W/@22.24819,-97.8400097,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.248185!4d-97.837821
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Madero 1ero de Mayo 1ero de Mayo #223 Pte. Zona Centro, Cd Madero. </a></td>
+            <td>833 194 0319</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B013'01.7%22N+97%C2%B051'23.3%22W/@22.217142,-97.8586547,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.217137!4d-97.856466
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Tampico Olmos Fray Andres de Olmos 205-Z. Zona Centro. Tampico, Tamaulipas </a></td>
+            <td>833 194 0319</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tamaulipas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/22%C2%B015'10.4%22N+97%C2%B051'20.7%22W/@22.25289,-97.8579437,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d22.252885!4d-97.855755
+              " rel="noopener noreferrer" target="_blank">Coral Bisutería Suc. Soriana Ejército Av. Ejercito Mexicano #1101 Local 9. Fracc. Tamaulipas</a></td>
+            <td>833 194 0319</td>
+            <td></td>
+          </tr>
+<!-- Alta Distribuidor Tamaulipas -->
+<tr>
+    <td>Tamaulipas</td>
+    <td><a  draggable="false" href="https://www.google.com.mx/maps/place/Bellarte/@25.5303542,
+        -103.2286791,20.75z/data=!4m5!3m4!1s0x868fc12cde9553d7:0xcb8f115b22ecdb4f!8m2!3d25.5304323!4d-103.2285656" rel="noopener noreferrer" target="_blank">
+        Bellarte Matamoros<br> Plaza Comercial Sofia Local 1 en Calle Niños Heroes No. 102 Nte., Col.  Centro, Matamoros.</a></td>
+    <td>871 182 3080</td>
+    <td>Lunes a Sábado de 9:00 a 20:00 horas. y Domingo de 10:00 a 14:00 horas.</td>
+</tr>
+          <tr>
+            <td>Tlaxcala</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B018'54.0%22N+97%C2%B055'24.3%22W/@19.314991,-97.9256087,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.314991!4d-97.92342
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Huamantla Morelos Poniente no. 117-B y C, col. Centro, Huamantla. </a></td>
+            <td>247 106 4326 </td>
+            <td>Lunes a Domingo de 9:00 a 20:00 horas.</td>
+          </tr>
+          <tr>
+            <td>Tlaxcala</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B025'03.2%22N+98%C2%B008'36.2%22W/@19.417552,-98.1455807,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.417552!4d-98.143392
+              " rel="noopener noreferrer" target="_blank">
+              Bissú Boutique Apizaco Plaza Santa Julia Local 4 Planta Baja. Col. Centro, Apizaco.</a></td>
+            <td>241 420 2877 </td>
+            <td>Lunes a Domingo de 9:00 a 19:30 horas.</td>
+          </tr>
+          <tr>
+            <td>Tlaxcala</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B019'11.5%22N+98%C2%B014'15.6%22W/@19.319861,-98.2398637,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.319861!4d-98.237675
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Tlaxcala Calle Lira y Ortega No. 1, entre Zitlalpopócatl y Miguel Guridi y Alcocer, Col. Centro, Tlaxcala. </a></td>
+            <td>246 466 8496 </td>
+            <td> Lunes a Sábado de 10:00 a 20:00 horas</td>
+          </tr>
+          <tr>
+            <td>Tlaxcala</td>
+            <td><a  draggable="false" href="https://goo.gl/maps/TPMzarhCyzGcb8877" rel="noopener noreferrer" target="_blank">El Mundo del Cosmético, Av. Allende Norte No. 417-A, Col. Centro, Huamantla, Tlaxcala 90500. </a></td>
+            <td>247 139 3884</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tlaxcala</td>
+            <td><a  draggable="false" href="https://goo.gl/maps/TPMzarhCyzGcb8877" rel="noopener noreferrer" target="_blank">Bissú Boutique Santa Ana, Ignacio Picazo Norte No. 43-C, Colonia Centro 90800 Santa Ana Chiautempan</a></td>
+            <td>246 238 7248</td>
+            <td>Lunes a Domingo de 10:30am a 19:00 p.m</td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B008'22.5%22N+96%C2%B006'22.3%22W/@19.1395811,-96.1083847,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.139576!4d-96.106196
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Boca del Río Plaza Las Américas Local 2B Condominio 3, frente a Megacable. Col. Ylang Ylang, Boca del Río. </a></td>
+            <td>229 375 3641/ 229 266 4642</td>
+            <td>Lunes a Domingo de 10:00 a 21:00 horas.</td> 
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B011'31.1%22N+96%C2%B008'18.9%22W/@19.1919621,-96.1407747,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.191957!4d-96.138586
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Veracruz Juan Soto No. 260, Entre Bravo y Guerrero, Col. Centro, Veracruz </a></td>
+             <td>229 932 4174</td> 
+             <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B056'56.0%22N+94%C2%B054'35.7%22W/@17.9489061,-94.9121017,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d17.948901!4d-94.909913
+              " rel="noopener noreferrer" target="_blank">Centro Comercial Plaza Fantasía Miguel Hidalgo no. 207, col. Barrio Tamarindo, Acayucan. </a></td>
+            <td>924 244 9046</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B011'32.7%22N+96%C2%B008'23.5%22W/@19.1924071,-96.1420457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.192402!4d-96.139857
+              " rel="noopener noreferrer" target="_blank">Vic_Vas Calle Hernan Cortés No. 453, entre Guerrero y Allende. Col. Centro, Veracruz </a></td>
+            <td>229 932 6317</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B026'58.0%22N+95%C2%B012'49.4%22W/@18.4494411,-95.2159217,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.449436!4d-95.213733
+              " rel="noopener noreferrer" target="_blank">Vic_Vas Interior Mercado Hidalgo Loc. L-63, 64, 65. Col. Centro. Veracruz. </a></td>
+            <td>229 931 2575</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B031'55.2%22N+96%C2%B055'21.1%22W/@19.531991,-96.9247147,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.531986!4d-96.922526
+              " rel="noopener noreferrer" target="_blank">Tu Moda Lucio no. 70, col. Centro, Xalapa. </a></td>
+            <td>228 817 0725</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/19%C2%B035'27.6%22N+96%C2%B056'48.2%22W/@19.591001,-96.9488967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.590996!4d-96.946708
+              " rel="noopener noreferrer" target="_blank">Mas Bella Benito Juárez no. 35, col. Centro, Xalapa.</a></td>
+            <td>228 810 6407</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/18%C2%B008'44.7%22N+94%C2%B025'15.4%22W/@18.1457421,-94.4231447,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.145737!4d-94.420956
+              " rel="noopener noreferrer" target="_blank">Belleza Mary Mercado Coatzacoalcos Planta Alta Local 2, Col. Centro, Coatzacoalcos. </a></td>
+            <td>921 212 0671</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'06.3%22N+94%C2%B032'51.8%22W/@17.9850761,-94.5499077,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.985071!4d-94.547719
+              " rel="noopener noreferrer" target="_blank">Belleza Mary Lerdo No. 54, Col. Centro, Minatitlán.</a></td>
+            <td>922 223 1351</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'06.3%22N+94%C2%B032'51.8%22W/@17.9850761,-94.5499077,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d17.985071!4d-94.547719
+              " rel="noopener noreferrer" target="_blank">Mas Bella Plaza Crystal Plaza Crystal Loc. 16E en Av. Lázaro Cárdenas. Col. Encinal, Xalapa</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'06.3%22N+94%C2%B032'51.8%22W/@17.9850761,-94.5499077,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d17.985071!4d-94.547719
+              " rel="noopener noreferrer" target="_blank">Mas Bella Plaza Museo Plaza Crystal Museo Loc. 4-B en Lucio Blanco No. 45. Col. Obrero Campesina, Xalapa</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'06.3%22N+94%C2%B032'51.8%22W/@17.9850761,-94.5499077,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d17.985071!4d-94.547719
+              " rel="noopener noreferrer" target="_blank">Mas Bella Plaza Domo Hermenegildo Galeana No. 7 Loc. 4. Col. Centro, Xalapa</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B059'06.3%22N+94%C2%B032'51.8%22W/@17.9850761,-94.5499077,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d17.985071!4d-94.547719
+              " rel="noopener noreferrer" target="_blank">Mas Bella Coatepec Santos Degollado No. 21. Col. Centro, Coatepec.</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B056'56.0%22N+94%C2%B054'35.7%22W/@17.9489061,-94.9121017,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.948901!4d-94.909913
+              " rel="noopener noreferrer" target="_blank">Mas Bella Revolución Av. Atenas Veracruzana No. 600. Col. Revolución, Xalapa</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Veracruz</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/17%C2%B054'32.1%22N+94%C2%B005'31.3%22W/@17.9089231,-94.0942087,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d17.908918!4d-94.09202
+              " rel="noopener noreferrer" target="_blank">Palacio de la Fantasía Hidalgo No. 115, Col. Centro, Las Choapas. </a></td>
+            <td>923 237 0903</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'46.1%22N+89%C2%B037'21.6%22W/@20.962822,-89.6248577,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.962817!4d-89.622669
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Mérida Calle 58 No. 448 Loc-4, Entre 67 Y 69 Col. Centro, Mérida, Yucatán.</a></td>
+            <td>999 980 3301 <br> 999 173 5316</td>
+            <td>Lunes a Sábado de 9:00 a 20:00 horas. Domingo de 9:00 a 17:00 horas.</td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'57.0%22N+89%C2%B037'12.7%22W/@20.965844,-89.6223687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.965839!4d-89.62018
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Mérida Calle 63 No. 483 Local 3 por 56 y 54. Col. Centro, Mérida. </a></td>
+            <td>999 980 3301 <br> 999 173 5316</td>
+            <td>Lunes a Sábado de 9:00 a 20:00 horas. Domingo de 9:00 a 17:00 </td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B058'04.7%22N+89%C2%B037'18.1%22W/@20.967969,-89.6238757,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.967964!4d-89.621687
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Mérida Mayoreo Calle 58 No. 493 Local 9 por 59 y 61, Col. Centro, Mérida. </a></td>
+            <td>999 980 3301 <br> 999 173 5316</td>
+            <td>Lunes a Sábado de 9:00 a 20:00 horas. Domingo de 9:00 a 17:00 horas.</td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B059'32.9%22N+89%C2%B038'58.1%22W/@20.992468,-89.6516687,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.992468!4d-89.64948
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Mérida Las Américas Plaza Las Américas Loc. B11, en Calle 21 No. 327, Col. Miguel Hidalgo, Mérida.</a></td>
+            <td>999 980 3301 <br> 999 173 5316</td>
+            <td>Lunes a Domingo de 10:00 a 21:30 horas</td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B059'32.9%22N+89%C2%B038'57.9%22W/@20.992473,-89.6515967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.992468!4d-89.649408
+              " rel="noopener noreferrer" target="_blank">Bissú Boutique Mérida Plaza Patio Plaza Patio Mérida Local C-27, Mérida </a></td>
+            <td> 999 980 3301 <br> 999 173 5316 </td>
+            <td>Lunes a Domingo de 10:00 a 21:30 horas.</td>
+          </tr>
+
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'49.1%22N+89%C2%B037'32.3%22W/@20.963639,-89.6278397,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.963634!4d-89.625651
+              " rel="noopener noreferrer" target="_blank" >Novedades de León Calle 67 no. 526-A x 62 y 64, col. Centro, Mérida. </a></td>
+            <td>999 928 7704</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'57.0%22N+89%C2%B037'22.0%22W/@20.965838,-89.6249587,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.965833!4d-89.62277
+              " rel="noopener noreferrer" target="_blank">Novedades de León Calle 63-A no. 500-E depto. 2 X, col. Centro, Mérida. </a></td>
+            <td>999 928 7704</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'41.6%22N+89%C2%B037'17.4%22W/@20.961565,-89.6236787,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.96156!4d-89.62149
+              " rel="noopener noreferrer" target="_blank">Novedades Mérida Calle 56 no. 538 x 69 y 71, col. Centro, Mérida. </a></td>
+            <td>999 924 6852</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'40.7%22N+89%C2%B037'37.2%22W/@20.961304,-89.6291937,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.961299!4d-89.627005
+              " rel="noopener noreferrer" target="_blank">Novedades de León Calle 64 no. 581 x 71, col. Centro, Mérida. </a></td>
+            <td>999 924 5601</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B057'41.0%22N+89%C2%B037'17.3%22W/@20.961385,-89.6236577,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.96138!4d-89.621469
+              " rel="noopener noreferrer" target="_blank">Novedades de León Calle 61 no. 492 x 56 y 58, col. Centro, Mérida. </a></td>
+            <td>999 928 7704</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/20%C2%B059'58.6%22N+89%C2%B035'45.3%22W/@20.999607,-89.5980927,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d20.999602!4d-89.595904
+              " rel="noopener noreferrer" target="_blank">Doly Plaza Fiesta Local 32 en Calle 6 No. 400 por 21, Col. Diaz Ordaz, Mérida. </a></td>
+            <td>999 910 0172</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Yucatán</td>
+            <td><a  draggable="false" href="">Doly Plaza Dorada Local 176 en Calle 50 No. 143 por 15 y 19, Col. Fracc. Nueva Hidalgo, Mérida. Teléfono. </a></td>
+            <td> 999 910 0172</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Zacatecas</td>
+            <td><a  draggable="false" href="https://www.google.com.mx/maps/place/23%C2%B010'56.8%22N+102%C2%B052'13.0%22W/@23.1824449,-102.8724607,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d23.18244!4d-102.870272
+              "rel="noopener noreferrer" target="_blank">La Muñeca Blvd. Hombres Ilustres no. 107, col. Centro, Fresnillo.</a></td>
+            <td>493 932 0194</td>
+            <td></td>
+          </tr>
+  
+      </tbody>
+    </table>
+
+ 
+</div>
+
+<script src="index.js"></script>
+
+</body>
+
+</html>
+
